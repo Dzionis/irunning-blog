@@ -1,0 +1,30 @@
+---
+layout: default
+title: "Blog - iRunning"
+description: "App guides, running news, race calendars, and release notes from the iRunning team."
+---
+
+<section class="blog-page-header">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>App guides, running news, race calendars, and what's new in iRunning.</p>
+  </div>
+</section>
+
+<section class="blog-listing">
+  <div class="container">
+    <div class="posts-grid">
+      {% for post in site.posts %}
+      <a href="{{ post.url | relative_url }}" class="post-card"
+         data-ga-event="blog_post_click" data-ga-location="blog_listing" data-ga-post-title="{{ post.title }}">
+        <div class="post-card-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          {% if post.categories.first %}<span class="tag tag-{{ post.categories.first }}">{{ post.categories.first }}</span>{% endif %}
+        </div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

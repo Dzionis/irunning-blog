@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">iRunning</span>
+      <p>Run Tracker &amp; Interval Coach for iPhone and Apple Watch</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ site.app_store_url }}" target="_blank" rel="noopener"
+         data-ga-event="app_store_click" data-ga-location="footer_nav" data-ga-destination="{{ site.app_store_url }}">App Store</a>
+      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+      <a href="{{ '/terms/' | relative_url }}">Terms</a>
+    </nav>
+    <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} iRunning. All rights reserved.</p>
+  </div>
+</footer>

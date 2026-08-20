@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="container post">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.categories.first %}<span class="tag tag-{{ page.categories.first }}">{{ page.categories.first }}</span>{% endif %}
+      <span class="reading-time">{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="post-cta">
+    <h2>Run Your Next Workout with iRunning</h2>
+    <p>Intervals, GPS tracking, voice cues, and training plans — free on iPhone and Apple Watch.</p>
+    <a href="{{ site.app_store_url }}" class="btn-white" target="_blank" rel="noopener"
+       data-ga-event="footer_cta_click" data-ga-location="post_cta" data-ga-destination="{{ site.app_store_url }}">
+      Download on App Store — Free
+    </a>
+  </div>
+</article>

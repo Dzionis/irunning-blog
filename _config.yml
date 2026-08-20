@@ -1,0 +1,43 @@
+future: true
+
+title: iRunning
+description: "Interval running made simple. Build workouts, follow voice cues, track GPS runs, and train with plans — on iPhone and Apple Watch."
+url: "https://irunning.app"
+baseurl: ""
+
+app_store_url: "https://apps.apple.com/us/app/id6770997508"
+ga_measurement_id: "G-XXXXXXXXXX"
+
+author:
+  name: iRunning Team
+
+social:
+  name: iRunning
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+permalink: /blog/:year/:month/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "iRunning Team"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - README.md
+  - SITE_CONTEXT.md
+  - DESIGN_SYSTEM.md
+  - vendor/
