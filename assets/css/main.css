@@ -173,7 +173,7 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; }
 .btn-white:active { transform: scale(0.97); }
 
 /* ---- Hero ---- */
-.hero { padding: 72px 0 64px; overflow: hidden; }
+.hero { padding: 72px 0 64px; }
 .hero-inner {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
