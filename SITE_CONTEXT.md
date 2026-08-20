@@ -72,8 +72,10 @@ Screens live in `assets/images/screens/` (screen-run, screen-plan, screen-summar
 
 ## Site Structure
 
+Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero badge + "Your session" strip come from variant **V4 · Dimensional** in `Site - Main Page Variants.html` (V4's green disc was later removed in favor of a soft phone shadow); the watch card surface + CSS Apple Watch Ultra render (`.aw-*` classes) come from variant **A · Floating display** in `Site - Watch Block Variants.html`. The watch screen image is the simulator capture center-cropped to 401×496 (true display ratio), matching the design's `assets/watch-screen.png`.
+
 ```
-/               — Homepage (hero + phone mockup, interval strip, features, Watch, import/share, reviews, CTA, blog preview)
+/               — Homepage (hero + real run screenshot with soft shadow, "Your session" proportional-bar strip, features, Watch, screens gallery, import/share, reviews, CTA, blog preview)
 /blog/          — Blog listing (all posts)
 /blog/:year/:month/:title/  — Individual posts
 /privacy/       — Privacy policy (covers GPS + HealthKit data; lists Firebase, Amplitude, Apphud, Facebook SDKs)

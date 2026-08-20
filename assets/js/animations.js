@@ -16,7 +16,7 @@
   );
 
   document.querySelectorAll(
-    '.feature-card, .split-card, .review-card, .post-card, .timeline-card, .shot-card'
+    '.feature-card, .split-card, .review-card, .post-card, .session-card, .shot-card'
   ).forEach(function (card) {
     card.classList.add('animate-on-scroll');
     observer.observe(card);

@@ -73,19 +73,32 @@ image:
   </div>
 </section>
 
-<!-- Interval timeline strip -->
+<!-- "Your session" strip -->
 <section class="timeline">
   <div class="container">
-    <div class="timeline-card">
-      <div class="timeline-title">A workout in iRunning</div>
-      <div class="timeline-row">
-        <div class="tl-block tl-warmup"><small>Warm-up</small>5:00</div>
-        <span class="tl-repeat">8×</span>
-        <div class="tl-block tl-work"><small>Run</small>0:45</div>
-        <div class="tl-block tl-rest"><small>Walk</small>0:30</div>
-        <div class="tl-block tl-cooldown"><small>Cool-down</small>5:00</div>
+    <div class="session-card">
+      <div class="session-head">
+        <div class="session-label">Your session</div>
+        <div class="session-total mono-num">20:00 · 8 reps</div>
       </div>
-      <p class="timeline-caption">Work, rest, warm-up, cool-down — by time or distance, with repeat blocks. Build it once, run it whenever.</p>
+      <div class="session-grid">
+        <span class="session-name">Warm-up</span>
+        <div class="session-bar bar-warmup"></div>
+        <span class="session-time mono-num">5:00</span>
+
+        <span class="session-name session-name-run">Run <em class="session-reps mono-num">×8</em></span>
+        <div class="session-bar bar-run"></div>
+        <span class="session-time session-time-run mono-num">0:45</span>
+
+        <span class="session-name">Walk <em class="session-reps session-reps-mut mono-num">×8</em></span>
+        <div class="session-bar bar-walk"></div>
+        <span class="session-time mono-num">0:30</span>
+
+        <span class="session-name">Cool-down</span>
+        <div class="session-bar bar-cooldown"></div>
+        <span class="session-time mono-num">5:00</span>
+      </div>
+      <p class="session-caption">Work, rest, warm-up, cool-down — by time or distance, with repeat blocks. Build it once, run it whenever.</p>
     </div>
   </div>
 </section>
@@ -157,15 +170,16 @@ image:
         </ul>
       </div>
       <div class="watch-visual">
-        <div class="watch-strap watch-strap-top"></div>
-        <div class="watch-body">
-          <div class="watch-screen">
+        <div class="aw">
+          <div class="aw-band aw-band-top"></div>
+          <div class="aw-case">
             <img src="{{ '/assets/images/screens/screen-watch.png' | relative_url }}"
                  alt="iRunning on Apple Watch during a work interval: distance remaining, heart rate zone bar, pace, and live heart rate"
-                 width="416" height="496" loading="lazy">
+                 width="401" height="496" loading="lazy">
+            <span class="aw-guard"></span><span class="aw-crown"></span><span class="aw-sidebtn"></span><span class="aw-action"></span>
           </div>
+          <div class="aw-band aw-band-bot"></div>
         </div>
-        <div class="watch-strap watch-strap-bottom"></div>
       </div>
     </div>
   </div>
