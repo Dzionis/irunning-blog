@@ -454,12 +454,13 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; }
 }
 .shot-card { text-align: center; }
 .shot-frame {
+  /* corner roundness proportional to the hero phone (48px @ 320px wide) */
   background: var(--green-900);
-  border-radius: 26px;
-  padding: 6px;
+  border-radius: 34px;
+  padding: 7px;
   box-shadow: 0 12px 32px rgba(4, 52, 44, 0.12);
 }
-.shot-frame img { border-radius: 21px; display: block; width: 100%; }
+.shot-frame img { border-radius: 28px; display: block; width: 100%; }
 .shot-card h3 { margin: 16px 0 4px; font-size: 1rem; font-weight: 600; }
 .shot-card p { font-size: 0.85rem; color: var(--paper-800); line-height: 1.5; }
 
