@@ -100,8 +100,14 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 
 ## Analytics Setup
 
-- **GA4 Measurement ID:** NOT SET YET — placeholder `G-XXXXXXXXXX` in `_config.yml` keeps the snippet disabled. Create a GA4 property, paste the real ID, and everything activates.
+- **GA4 Measurement ID:** `G-LZY2M1LLF5` (set 2026-08-21) — web data stream "iRunning website" on the app's Firebase GA4 property `irunning-4d1b0`, which is already linked to Google Ads account **654-344-4532**.
 - Event tracking is data-attribute driven (same system as tts-blog): `data-ga-event`, `data-ga-location`, `data-ga-destination`, handled by delegation in `assets/js/analytics.js`.
+- **App Store campaign tokens:** `analytics.js` rewrites every `apps.apple.com` link at runtime with `ct=<token>&mt=8` — `ct=pmax` for sessions arriving with `gclid`/`utm_medium=cpc` (persisted in sessionStorage), `ct=website` otherwise. `pt=` (Apple provider token) not added yet — required before App Store Connect App Analytics will report these campaigns; web-referrer attribution works regardless.
+
+### Advertising (2026-08)
+
+- **Google Ads PMax campaign** (free credits): goal = GA4 `app_store_click` imported as primary conversion; final URL `https://irunning.app`, URL expansion OFF. Ad copy asset pack drafted 2026-08-21 (15 headlines / 5 long / 5 descriptions, verified ≤30/90 chars).
+- A Google **App campaign** (5×30 headlines / 5×90 descriptions format) was also drafted for App Store installs.
 
 ### Custom events wired
 
@@ -154,10 +160,9 @@ permalink: /blog/:year/:month/:title/
 
 ## What This Site Does NOT Have (yet)
 
-- Real GA4 Measurement ID (snippet auto-disabled until set)
 - Real App Store review quotes on the homepage (current three are placeholder marketing copy — swap in genuine reviews)
 - Dark mode (design system defines tokens; deliberately "daylight first" for now)
 - OG image is generated from `scripts`-free manual render — regenerate if hero copy changes
 - FAQ section, email capture, search
-- Per-button App Store campaign tokens (`?ct=hero`) — worth adding once GA4 is live
+- `pt=` provider token on App Store links (App Analytics campaign reporting needs it; get it from ASC → Analytics → Sources → generate campaign link)
 - Localized pages (app ships 28 locales; site is English-only)

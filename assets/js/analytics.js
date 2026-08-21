@@ -1,4 +1,22 @@
 (function () {
+  // Tag every App Store link with a campaign token (ct) so App Store Connect
+  // can attribute installs; sessions arriving from ads get ct=pmax for the
+  // whole visit. Runs before the gtag guard so links get tagged even when
+  // analytics is blocked.
+  try {
+    var searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('gclid') || searchParams.get('utm_medium') === 'cpc') {
+      sessionStorage.setItem('irun_ct', 'pmax');
+    }
+    var ct = sessionStorage.getItem('irun_ct') || 'website';
+    document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (link) {
+      var url = new URL(link.href);
+      url.searchParams.set('ct', ct);
+      url.searchParams.set('mt', '8');
+      link.href = url.toString();
+    });
+  } catch (e) { /* sessionStorage unavailable (private mode) — links stay untagged */ }
+
   if (typeof gtag !== 'function') return;
 
   var pageName = document.title;
