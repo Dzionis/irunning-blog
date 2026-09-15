@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 500px; padding: 30px 32px; }
+h3 { font-size: 18px; font-weight: 600; color: var(--green-900); margin: 6px 0 4px; }
+p.sub { font-size: 13px; color: var(--paper-800); }
+svg { position: absolute; left: 0; top: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+</style></head><body><div class="canvas">
+  <div class="cap">Sub-30 5K · pace bands per km</div>
+  <h3>Every workout sits a few seconds either side of 6:00</h3>
+  <p class="sub">Faster is to the left. Easy and long runs have no pace band — they run on zone 2 heart rate.</p>
+
+  <svg width="720" height="500" viewBox="0 0 720 500">
+    <!-- axis: x(s) = 262 + (s - 330) * 7.6 ; 5:30 (330) → 262, 6:25 (385) → 680 -->
+    <g stroke="#D3D1C7" stroke-width="1">
+      <line x1="262" y1="132" x2="262" y2="430"/><line x1="300" y1="132" x2="300" y2="430"/>
+      <line x1="338" y1="132" x2="338" y2="430"/><line x1="376" y1="132" x2="376" y2="430"/>
+      <line x1="414" y1="132" x2="414" y2="430"/><line x1="452" y1="132" x2="452" y2="430"/>
+      <line x1="528" y1="132" x2="528" y2="430"/><line x1="566" y1="132" x2="566" y2="430"/>
+      <line x1="604" y1="132" x2="604" y2="430"/><line x1="642" y1="132" x2="642" y2="430"/>
+      <line x1="680" y1="132" x2="680" y2="430"/>
+    </g>
+    <g font-size="11.5" fill="#888780" text-anchor="middle">
+      <text x="262" y="452">5:30</text><text x="338" y="452">5:40</text><text x="414" y="452">5:50</text>
+      <text x="566" y="452">6:10</text><text x="642" y="452">6:20</text>
+    </g>
+    <!-- 6:00 goal line -->
+    <line x1="490" y1="124" x2="490" y2="436" stroke="#04342C" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="490" y="452" font-size="12" font-weight="600" fill="#04342C" text-anchor="middle">6:00</text>
+    <text x="490" y="474" font-size="11.5" fill="#444441" text-anchor="middle">29:59 finish = 6:00 /km · 9:39 /mi</text>
+
+    <!-- rows: label column + band -->
+    <g font-size="14" fill="#04342C" font-weight="600">
+      <text x="32" y="160">Short reps</text>
+      <text x="32" y="210">800 m reps</text>
+      <text x="32" y="260">Kilometre reps</text>
+      <text x="32" y="310">Time trial</text>
+      <text x="32" y="360">Goal-pace finish</text>
+      <text x="32" y="410">Tempo</text>
+    </g>
+    <g font-size="12" fill="#888780">
+      <text x="32" y="176">400 m · weeks 1, 2, 7, 8</text>
+      <text x="32" y="226">week 3</text>
+      <text x="32" y="276">weeks 5, 6</text>
+      <text x="32" y="326">5K · week 8</text>
+      <text x="32" y="376">end of long run · week 6</text>
+      <text x="32" y="426">10–20 min · weeks 1–3 and 5–7</text>
+    </g>
+    <!-- bands -->
+    <g>
+      <rect x="300" y="148" width="114" height="22" rx="11" fill="#1D9E75"/>
+      <rect x="338" y="198" width="114" height="22" rx="11" fill="#1D9E75"/>
+      <rect x="376" y="248" width="99" height="22" rx="11" fill="#1D9E75"/>
+      <rect x="414" y="298" width="76" height="22" rx="11" fill="#D85A30"/>
+      <rect x="452" y="348" width="99" height="22" rx="11" fill="#BA7517"/>
+      <rect x="528" y="398" width="114" height="22" rx="11" fill="#0F6E56"/>
+    </g>
+    <g font-size="11.5" fill="#fff" font-weight="600" text-anchor="middle">
+      <text x="357" y="163">5:35–5:50</text>
+      <text x="395" y="213">5:40–5:55</text>
+      <text x="425" y="263">5:45–5:58</text>
+      <text x="452" y="313">5:50–6:00</text>
+      <text x="501" y="363">5:55–6:08</text>
+      <text x="585" y="413">6:05–6:20</text>
+    </g>
+  </svg>
+</div></body></html>

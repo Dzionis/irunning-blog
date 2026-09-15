@@ -1,0 +1,77 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 600px; padding: 30px 32px; }
+h3 { font-size: 18px; font-weight: 600; color: var(--green-900); margin: 6px 0 0; }
+svg { position: absolute; left: 0; top: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+</style></head><body><div class="canvas">
+  <div class="cap">How a zone 2 run works in iRunning</div>
+  <h3>Your heart rate, your zone, and an alert on both edges</h3>
+
+  <svg width="720" height="600" viewBox="0 0 720 600">
+    <!-- chart: x 90..688 (0..40 min), y: bpm 100 → 300, 150 → 100 ; 4 px per bpm -->
+    <rect x="90" y="188" width="598" height="72" fill="#E1F5EE"/>
+    <line x1="90" y1="188" x2="688" y2="188" stroke="#1D9E75" stroke-width="1.5"/>
+    <line x1="90" y1="260" x2="688" y2="260" stroke="#1D9E75" stroke-width="1.5"/>
+    <g font-size="12" fill="#444441" text-anchor="end">
+      <text x="80" y="192">128</text><text x="80" y="264">110</text>
+    </g>
+    <text x="90" y="164" font-size="12" font-weight="600" fill="#0F6E56">Zone 2 · 110–128 bpm</text>
+    <text x="90" y="180" font-size="11.5" fill="#444441">default zones · yours follow your max HR</text>
+
+    <!-- HR trace -->
+    <path d="M90 300 C 120 290, 140 250, 170 238 S 230 226, 260 222 S 320 210, 350 196 S 380 172, 402 170 S 430 186, 460 204 S 520 216, 550 226 S 590 252, 612 270 S 650 262, 688 244"
+          fill="none" stroke="#04342C" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- alert: too high -->
+    <circle cx="376" cy="178" r="6" fill="#D85A30"/>
+    <line x1="376" y1="172" x2="376" y2="132" stroke="#D85A30" stroke-width="1.5"/>
+    <rect x="300" y="104" width="152" height="28" rx="14" fill="#D85A30"/>
+    <text x="376" y="123" font-size="12.5" font-weight="600" fill="#fff" text-anchor="middle">“Heart rate too high”</text>
+    <text x="462" y="123" font-size="12" fill="#444441">→ ease off, walk a hill</text>
+
+    <!-- alert: too low -->
+    <circle cx="604" cy="265" r="6" fill="#BA7517"/>
+    <line x1="604" y1="271" x2="604" y2="306" stroke="#BA7517" stroke-width="1.5"/>
+    <rect x="532" y="306" width="144" height="28" rx="14" fill="#BA7517"/>
+    <text x="604" y="325" font-size="12.5" font-weight="600" fill="#fff" text-anchor="middle">“Heart rate too low”</text>
+    <text x="522" y="325" font-size="12" fill="#444441" text-anchor="end">→ pick it up a touch</text>
+
+    <g font-size="11.5" fill="#888780" text-anchor="middle">
+      <text x="90" y="354">0 min</text><text x="389" y="354">20</text><text x="688" y="354">40</text>
+    </g>
+    
+
+    <line x1="32" y1="378" x2="688" y2="378" stroke="#D3D1C7"/>
+
+    <!-- 8-week shape: long run minutes -->
+    <text x="32" y="410" font-size="11" font-weight="600" letter-spacing="1.3" fill="#6E7B74">ZONE 2 BASE BUILDER · LONG RUN MINUTES, TEST AT EACH END</text>
+    <!-- baseline 560; 1 min = 1.5 px; bars 44, step 76, x start 70 -->
+    <g fill="#1D9E75">
+      <rect x="70" y="485" width="44" height="75" rx="4"/>
+      <rect x="146" y="477.5" width="44" height="82.5" rx="4"/>
+      <rect x="222" y="462.5" width="44" height="97.5" rx="4"/>
+      <rect x="298" y="492.5" width="44" height="67.5" rx="4" fill="#9FE1CB"/>
+      <rect x="374" y="455" width="44" height="105" rx="4"/>
+      <rect x="450" y="447.5" width="44" height="112.5" rx="4"/>
+      <rect x="526" y="440" width="44" height="120" rx="4"/>
+      <rect x="602" y="485" width="44" height="75" rx="4"/>
+    </g>
+    <line x1="56" y1="560" x2="660" y2="560" stroke="#888780"/>
+    <g font-size="12" font-weight="600" fill="#04342C" text-anchor="middle">
+      <text x="92" y="479">50</text><text x="168" y="471">55</text><text x="244" y="456">65</text><text x="320" y="486">45</text>
+      <text x="396" y="449">70</text><text x="472" y="441">75</text><text x="548" y="434">80</text><text x="624" y="479">50</text>
+    </g>
+    <g font-size="11.5" fill="#888780" text-anchor="middle">
+      <text x="92" y="578">Wk 1</text><text x="168" y="578">Wk 2</text><text x="244" y="578">Wk 3</text><text x="320" y="578">Wk 4</text>
+      <text x="396" y="578">Wk 5</text><text x="472" y="578">Wk 6</text><text x="548" y="578">Wk 7</text><text x="624" y="578">Wk 8</text>
+    </g>
+    <!-- test markers -->
+    <g font-size="11.5" font-weight="600">
+      <rect x="54" y="424" width="76" height="22" rx="11" fill="#04342C"/>
+      <text x="92" y="439" fill="#fff" text-anchor="middle">5K test #1</text>
+      <rect x="586" y="424" width="76" height="22" rx="11" fill="#04342C"/>
+      <text x="624" y="439" fill="#fff" text-anchor="middle">5K test #2</text>
+    </g>
+    <text x="320" y="596" font-size="11" fill="#888780" text-anchor="middle">cutback</text>
+  </svg>
+</div></body></html>

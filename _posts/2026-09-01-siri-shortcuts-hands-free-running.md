@@ -1,8 +1,8 @@
 ---
 title: "Hey Siri, How's My Run? Hands-Free Running with Siri and Shortcuts"
 description: "Every Siri phrase iRunning understands — start, pause, skip, finish, and hear your stats mid-run — plus how to build your own shortcuts in the Shortcuts app."
-categories: [features]
-date: 2026-09-15 09:00:00
+categories: [guides]
+date: 2026-09-01 09:00:00
 image:
   path: /assets/images/blog/siri-conversation.png
   width: 1440
@@ -87,7 +87,7 @@ Talking to Siri at threshold pace isn't for everyone, and a busy street can drow
 
 - **The speaker button** on the run screen, and on your Live Activity on the Lock Screen and in the Dynamic Island
 - **Holding the big number** on the locked run screen for a moment
-- **The Action Button** on newer iPhones, for one press from your pocket. The setup takes a minute: see [how to put "Announce my run" on your iPhone's Action Button]({% post_url 2026-09-15-action-button-announce-my-run %}).
+- **The Action Button** on newer iPhones, for one press from your pocket. The setup takes a minute: see [how to put "Announce my run" on your iPhone's Action Button]({% post_url 2026-09-03-action-button-announce-my-run %}).
 
 <figure class="post-figure">
   <picture>

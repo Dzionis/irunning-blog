@@ -1,8 +1,8 @@
 ---
 title: "One Press, Full Update: Put \"Announce My Run\" on Your iPhone's Action Button"
 description: "Turn the button that used to be the silent switch into a running coach. Press and hold mid-run to hear your pace, heart rate, and time left. No unlocking, no looking."
-categories: [features]
-date: 2026-09-15 10:00:00
+categories: [guides]
+date: 2026-09-03 10:00:00
 image:
   path: /assets/images/blog/action-button-hero.png
   width: 1440
@@ -126,6 +126,6 @@ The same **Announce my run** control fits in a couple of other places:
   <figcaption>Every trigger speaks the same sentence, so you only set it up once.</figcaption>
 </figure>
 
-And if you'd rather talk than press, every one of these works by voice too. See [every Siri phrase iRunning understands]({% post_url 2026-09-15-siri-shortcuts-hands-free-running %}).
+And if you'd rather talk than press, every one of these works by voice too. See [every Siri phrase iRunning understands]({% post_url 2026-09-01-siri-shortcuts-hands-free-running %}).
 
 Set it up once, and your next interval session gets a coach you can reach without opening your eyes.

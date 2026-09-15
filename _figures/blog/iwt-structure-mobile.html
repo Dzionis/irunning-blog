@@ -1,0 +1,63 @@
+<!doctype html><html class="m"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 640px; padding: 24px 20px; }
+h3 { font-size: 17px; font-weight: 600; color: var(--green-900); margin: 6px 0 0; line-height: 1.25; }
+svg { position: absolute; left: 0; top: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+</style></head><body><div class="canvas">
+  <div class="cap">One interval walk · 40 min</div>
+  <h3>Five rounds of 3 minutes fast, 3 minutes easy</h3>
+
+  <svg width="400" height="640" viewBox="0 0 400 640">
+    <!-- 40 min across 360 px → 9 px/min, x0 = 20 -->
+    <g>
+      <rect x="20" y="104" width="45" height="36" rx="6" fill="#E1F5EE"/>
+      <rect x="65" y="104" width="27" height="36" fill="#0F6E56"/><rect x="92" y="104" width="27" height="36" fill="#9FE1CB"/>
+      <rect x="119" y="104" width="27" height="36" fill="#0F6E56"/><rect x="146" y="104" width="27" height="36" fill="#9FE1CB"/>
+      <rect x="173" y="104" width="27" height="36" fill="#0F6E56"/><rect x="200" y="104" width="27" height="36" fill="#9FE1CB"/>
+      <rect x="227" y="104" width="27" height="36" fill="#0F6E56"/><rect x="254" y="104" width="27" height="36" fill="#9FE1CB"/>
+      <rect x="281" y="104" width="27" height="36" fill="#0F6E56"/><rect x="308" y="104" width="27" height="36" fill="#9FE1CB"/>
+      <rect x="335" y="104" width="45" height="36" rx="6" fill="#E1F5EE"/>
+    </g>
+    <g font-size="11" font-weight="600" text-anchor="middle">
+      <text x="42.5" y="126" fill="#085041">5′</text><text x="357.5" y="126" fill="#085041">5′</text>
+      <text x="78.5" y="126" fill="#fff">3′</text><text x="132.5" y="126" fill="#fff">3′</text><text x="186.5" y="126" fill="#fff">3′</text>
+      <text x="240.5" y="126" fill="#fff">3′</text><text x="294.5" y="126" fill="#fff">3′</text>
+    </g>
+    <g font-size="12.5">
+      <rect x="20" y="160" width="13" height="13" rx="3" fill="#0F6E56"/>
+      <text x="40" y="171" fill="#04342C" font-weight="600">Fast walk</text>
+      <text x="40" y="188" fill="#444441" font-size="12">talk, don't sing · zone 3 alert</text>
+      <rect x="210" y="160" width="13" height="13" rx="3" fill="#9FE1CB"/>
+      <text x="230" y="171" fill="#04342C" font-weight="600">Easy walk</text>
+      <text x="230" y="188" fill="#444441" font-size="12">full sentences</text>
+    </g>
+
+    <line x1="20" y1="214" x2="380" y2="214" stroke="#D3D1C7"/>
+    <text x="20" y="244" font-size="10.5" font-weight="600" letter-spacing="1.2" fill="#6E7B74">FAST MINUTES PER WEEK</text>
+
+    <!-- baseline y=580, 1 min = 5.6 px, bars 30 wide, step 44, x start 30 -->
+    <line x1="20" y1="300" x2="380" y2="300" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="380" y="292" font-size="11.5" fill="#854F0B" text-anchor="end">≈50 min: benefit levels off</text>
+    <g fill="#1D9E75">
+      <rect x="30" y="428.8" width="30" height="151.2" rx="4"/>
+      <rect x="74" y="378.4" width="30" height="201.6" rx="4"/>
+      <rect x="118" y="328" width="30" height="252" rx="4"/>
+      <rect x="162" y="428.8" width="30" height="151.2" rx="4" fill="#9FE1CB"/>
+      <rect x="206" y="328" width="30" height="252" rx="4"/>
+      <rect x="250" y="328" width="30" height="252" rx="4"/>
+      <rect x="294" y="311.2" width="30" height="268.8" rx="4"/>
+      <rect x="338" y="328" width="30" height="252" rx="4"/>
+    </g>
+    <line x1="20" y1="580" x2="380" y2="580" stroke="#888780"/>
+    <g font-size="11.5" font-weight="600" text-anchor="middle">
+      <text x="45" y="446" fill="#fff">27</text><text x="89" y="396" fill="#fff">36</text><text x="133" y="346" fill="#fff">45</text>
+      <text x="177" y="446" fill="#04342C">27</text><text x="221" y="346" fill="#fff">45</text><text x="265" y="346" fill="#fff">45</text>
+      <text x="309" y="329" fill="#fff">48</text><text x="353" y="346" fill="#fff">45</text>
+    </g>
+    <g font-size="11" fill="#888780" text-anchor="middle">
+      <text x="45" y="598">1</text><text x="89" y="598">2</text><text x="133" y="598">3</text><text x="177" y="598">4</text>
+      <text x="221" y="598">5</text><text x="265" y="598">6</text><text x="309" y="598">7</text><text x="353" y="598">8</text>
+      <text x="200" y="620">week · week 4 is a lighter cutback</text>
+    </g>
+  </svg>
+</div></body></html>

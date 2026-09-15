@@ -1,0 +1,79 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 560px; padding: 30px 32px; }
+h3 { font-size: 18px; font-weight: 600; color: var(--green-900); margin: 6px 0 0; }
+svg { position: absolute; left: 0; top: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+</style></head><body><div class="canvas">
+  <div class="cap">One interval walk · 40 minutes</div>
+  <h3>Five rounds of 3 minutes fast, 3 minutes easy</h3>
+
+  <svg width="720" height="560" viewBox="0 0 720 560">
+    <!-- timeline: 40 min across 656 px → 16.4 px/min, x0 = 32 -->
+    <g>
+      <rect x="32" y="104" width="82" height="40" rx="8" fill="#E1F5EE"/>
+      <rect x="114" y="104" width="49.2" height="40" fill="#0F6E56"/>
+      <rect x="163.2" y="104" width="49.2" height="40" fill="#9FE1CB"/>
+      <rect x="212.4" y="104" width="49.2" height="40" fill="#0F6E56"/>
+      <rect x="261.6" y="104" width="49.2" height="40" fill="#9FE1CB"/>
+      <rect x="310.8" y="104" width="49.2" height="40" fill="#0F6E56"/>
+      <rect x="360" y="104" width="49.2" height="40" fill="#9FE1CB"/>
+      <rect x="409.2" y="104" width="49.2" height="40" fill="#0F6E56"/>
+      <rect x="458.4" y="104" width="49.2" height="40" fill="#9FE1CB"/>
+      <rect x="507.6" y="104" width="49.2" height="40" fill="#0F6E56"/>
+      <rect x="556.8" y="104" width="49.2" height="40" fill="#9FE1CB"/>
+      <rect x="606" y="104" width="82" height="40" rx="8" fill="#E1F5EE"/>
+    </g>
+    <g font-size="12" font-weight="600" text-anchor="middle">
+      <text x="73" y="129" fill="#085041">5′</text>
+      <text x="138.6" y="129" fill="#fff">3′</text><text x="187.8" y="129" fill="#04342C">3′</text>
+      <text x="237" y="129" fill="#fff">3′</text><text x="286.2" y="129" fill="#04342C">3′</text>
+      <text x="335.4" y="129" fill="#fff">3′</text><text x="384.6" y="129" fill="#04342C">3′</text>
+      <text x="433.8" y="129" fill="#fff">3′</text><text x="483" y="129" fill="#04342C">3′</text>
+      <text x="532.2" y="129" fill="#fff">3′</text><text x="581.4" y="129" fill="#04342C">3′</text>
+      <text x="647" y="129" fill="#085041">5′</text>
+    </g>
+    <g font-size="12" fill="#444441">
+      <text x="32" y="166">Easy walk</text>
+      <text x="688" y="166" text-anchor="end">Easy walk</text>
+    </g>
+    <!-- legend -->
+    <g font-size="13">
+      <rect x="140" y="186" width="14" height="14" rx="3" fill="#0F6E56"/>
+      <text x="162" y="198" fill="#04342C" font-weight="600">Fast walk</text>
+      <text x="228" y="198" fill="#444441">you can talk, not sing · zone 3 heart-rate alert</text>
+      <rect x="140" y="212" width="14" height="14" rx="3" fill="#9FE1CB"/>
+      <text x="162" y="224" fill="#04342C" font-weight="600">Easy walk</text>
+      <text x="232" y="224" fill="#444441">full sentences · no alert</text>
+    </g>
+
+    <line x1="32" y1="258" x2="688" y2="258" stroke="#D3D1C7"/>
+
+    <!-- weekly fast minutes -->
+    <text x="32" y="292" font-size="11" font-weight="600" letter-spacing="1.3" fill="#6E7B74">FAST MINUTES PER WEEK · 3 INTERVAL DAYS + 1 LONG WALK</text>
+    <!-- chart area: baseline y=500, 1 min = 3.6 px, bars 48 wide, gap 34, start x=90 -->
+    <line x1="80" y1="320" x2="688" y2="320" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="688" y="312" font-size="12" fill="#854F0B" text-anchor="end">≈50 min: the benefit levels off</text>
+    <g fill="#1D9E75">
+      <rect x="90" y="402.8" width="48" height="97.2" rx="4"/>
+      <rect x="164" y="370.4" width="48" height="129.6" rx="4"/>
+      <rect x="238" y="338" width="48" height="162" rx="4"/>
+      <rect x="312" y="402.8" width="48" height="97.2" rx="4" fill="#9FE1CB"/>
+      <rect x="386" y="338" width="48" height="162" rx="4"/>
+      <rect x="460" y="338" width="48" height="162" rx="4"/>
+      <rect x="534" y="327.2" width="48" height="172.8" rx="4"/>
+      <rect x="608" y="338" width="48" height="162" rx="4"/>
+    </g>
+    <line x1="80" y1="500" x2="688" y2="500" stroke="#888780"/>
+    <g font-size="12.5" font-weight="600" fill="#04342C" text-anchor="middle">
+      <text x="114" y="396">27</text><text x="188" y="364">36</text><text x="262" y="332">45</text>
+      <text x="336" y="396">27</text><text x="410" y="332">45</text><text x="484" y="332">45</text>
+      <text x="558" y="346" fill="#fff">48</text><text x="632" y="332">45</text>
+    </g>
+    <g font-size="12" fill="#888780" text-anchor="middle">
+      <text x="114" y="520">Wk 1</text><text x="188" y="520">Wk 2</text><text x="262" y="520">Wk 3</text>
+      <text x="336" y="520">Wk 4</text><text x="410" y="520">Wk 5</text><text x="484" y="520">Wk 6</text>
+      <text x="558" y="520">Wk 7</text><text x="632" y="520">Wk 8</text>
+      <text x="336" y="540" font-size="11">cutback</text>
+    </g>
+  </svg>
+</div></body></html>

@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 344px; padding: 28px 32px; }
+.row { position: absolute; left: 32px; right: 32px; top: 70px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.step { background: #fff; border: 1px solid var(--paper-400); border-radius: 14px; padding: 14px 14px 12px; height: 212px; position: relative; }
+.n { width: 24px; height: 24px; border-radius: 99px; background: var(--green-900); color: #fff; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.step b { display: block; font-size: 15px; font-weight: 600; color: var(--green-900); margin: 10px 0 4px; line-height: 1.25; }
+.step span { display: block; font-size: 12.5px; color: var(--paper-800); line-height: 1.4; }
+.step.hl { border-color: var(--green-400); box-shadow: 0 0 0 2px var(--green-50); }
+.step.ext { background: transparent; border-style: dashed; }
+.chip { position: absolute; left: 14px; bottom: 12px; font-size: 11.5px; font-weight: 600; color: var(--green-800); background: var(--green-50); border-radius: 99px; padding: 3px 9px; }
+.step.ext .chip { color: var(--paper-800); background: var(--paper-200); }
+svg { position: absolute; left: 0; top: 0; }
+.foot { position: absolute; left: 32px; top: 306px; font-size: 12.5px; color: var(--paper-600); }
+</style></head><body><div class="canvas">
+  <div class="cap">From finished run to Instagram story</div>
+  <div class="row">
+    <div class="step"><div class="n">1</div><b>Open the run</b><span>History › your run › Share.</span><i class="chip" style="font-style:normal">in iRunning</i></div>
+    <div class="step"><div class="n">2</div><b>Pick an overlay</b><span>Tap the Transparent filter, then swipe through all 17.</span><i class="chip" style="font-style:normal">in iRunning</i></div>
+    <div class="step hl"><div class="n">3</div><b>Tap Copy</b><span>A PNG with a see-through background lands on your clipboard.</span><i class="chip" style="font-style:normal">in iRunning</i></div>
+    <div class="step ext"><div class="n">4</div><b>Paste on your photo</b><span>Open a story with your photo and paste the overlay as a sticker.</span><i class="chip" style="font-style:normal">Instagram</i></div>
+  </div>
+  <svg width="720" height="344" viewBox="0 0 720 344">
+    <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0F6E56"/></marker></defs>
+    <g stroke="#0F6E56" stroke-width="1.6" fill="none">
+      <line x1="178" y1="176" x2="199" y2="176" marker-end="url(#a)"/>
+      <line x1="349" y1="176" x2="370" y2="176" marker-end="url(#a)"/>
+      <line x1="520" y1="176" x2="541" y2="176" marker-end="url(#a)" stroke-dasharray="4 3"/>
+    </g>
+  </svg>
+  <div class="foot">No Instagram? Save puts it in Photos; Share sends the PNG to any app.</div>
+</div></body></html>
