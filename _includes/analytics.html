@@ -6,5 +6,9 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', '{{ site.ga_measurement_id }}');
+{%- if site.ga_measurement_id_web and site.ga_measurement_id_web != "" %}
+  // Web-only property — same events, no app stream mixed in.
+  gtag('config', '{{ site.ga_measurement_id_web }}');
+{%- endif %}
 </script>
 {% endif %}

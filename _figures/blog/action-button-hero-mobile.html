@@ -1,0 +1,39 @@
+<!doctype html><html class="m"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 672px; }
+.phone { position: absolute; left: 178px; top: 28px; width: 200px; border-radius: 32px; padding: 6px; }
+.phone .screen { border-radius: 27px; }
+.btn { position: absolute; left: 169px; width: 10px; border-radius: 3px 0 0 3px; background: #0B4A3E; }
+.btn.action { top: 124px; height: 30px; background: var(--green-400); }
+.btn.v1 { top: 174px; height: 44px; }
+.btn.v2 { top: 228px; height: 44px; }
+.call { position: absolute; left: 4px; top: 112px; width: 122px; text-align: right; }
+.call b { display: block; font-size: 17px; font-weight: 600; color: var(--green-900); line-height: 1.15; white-space: nowrap; }
+.call span { display: block; font-size: 12px; color: var(--paper-800); margin-top: 4px; line-height: 1.35; }
+.hear { position: absolute; left: 20px; top: 480px; width: 360px; }
+.bubble { margin-top: 8px; background: #fff; border: 1px solid var(--paper-400); border-radius: 18px; border-top-left-radius: 6px; padding: 12px 14px; font-size: 15px; line-height: 1.42; color: var(--green-900); }
+.chips { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 99px; background: var(--green-50); color: var(--green-800); font-size: 12.5px; font-weight: 500; }
+.d { width: 6px; height: 6px; border-radius: 9px; background: var(--green-400); display: inline-block; }
+svg.over { position: absolute; left: 0; top: 0; }
+</style></head><body><div class="canvas">
+  <div class="btn action"></div><div class="btn v1"></div><div class="btn v2"></div>
+  <div class="frame phone"><div class="screen"><img src="run-locked.png"></div></div>
+  <div class="call"><b>Press &amp; hold</b><span>the Action Button</span></div>
+
+  <div class="hear">
+    <div class="cap">You hear</div>
+    <div class="bubble">“13 seconds left in Run, heart rate 158, zone 4, target 150 to 165, pace 5:33 per kilometer, distance 510 meters.”</div>
+    <div class="chips">
+      <span class="chip"><i class="d"></i>Works with the screen off</span>
+      <span class="chip"><i class="d"></i>Music dips, never stops</span>
+    </div>
+  </div>
+
+  <svg class="over" width="400" height="700" viewBox="0 0 400 700">
+    <g fill="none" stroke="#1D9E75" stroke-linecap="round">
+      <path d="M156 127 A 14 14 0 0 0 156 151" stroke-width="2" opacity="0.9"/>
+      <path d="M148 120 A 22 22 0 0 0 148 158" stroke-width="2" opacity="0.5"/>
+    </g>
+  </svg>
+</div></body></html>

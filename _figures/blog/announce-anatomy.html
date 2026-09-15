@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 528px; }
+.phone { position: absolute; left: 40px; top: 40px; width: 264px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding-bottom: 0; }
+.phone .screen { height: 481px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.fade { position: absolute; left: 0; right: 0; bottom: 0; height: 90px; background: linear-gradient(rgba(248,246,239,0), #F8F6EF); }
+.head { position: absolute; left: 372px; top: 44px; width: 310px; }
+.head h3 { font-size: 19px; font-weight: 600; color: var(--green-900); line-height: 1.25; margin: 6px 0 6px; }
+.head p { font-size: 13px; color: var(--paper-800); line-height: 1.45; }
+.seg { position: absolute; left: 372px; width: 310px; height: 54px; background: #fff; border: 1px solid var(--paper-400); border-radius: 12px; padding: 8px 14px 0 14px; }
+.seg .k { font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-600); }
+.seg .v { font-size: 15px; color: var(--green-900); margin-top: 3px; white-space: nowrap; }
+.seg.extra { border-style: dashed; border-color: var(--amber-400); background: #FFFCF6; }
+.seg.extra .k { color: var(--amber-600); }
+svg.links { position: absolute; left: 0; top: 0; }
+.foot { position: absolute; left: 372px; top: 478px; width: 310px; font-size: 12.5px; color: var(--paper-600); line-height: 1.4; }
+</style></head><body><div class="canvas">
+  <div class="frame phone"><div class="screen"><img src="announce.png"><div class="fade"></div></div></div>
+
+  <div class="head">
+    <div class="cap">What to announce</div>
+    <h3>Your list, in order, becomes one sentence</h3>
+    <p>Reorder the list and the sentence follows. Up to five fields.</p>
+  </div>
+
+  <div class="seg" style="top:162px"><div class="k">Remaining</div><div class="v">“1 minute 48 left in Run,”</div></div>
+  <div class="seg" style="top:224px"><div class="k">Heart rate</div><div class="v">“heart rate 162, zone 4,”</div></div>
+  <div class="seg extra" style="top:286px"><div class="k">Also say · Target band</div><div class="v">“target 155 to 168,”</div></div>
+  <div class="seg" style="top:348px"><div class="k">Pace</div><div class="v">“pace 4:52 per kilometer,”</div></div>
+  <div class="seg" style="top:410px"><div class="k">Distance</div><div class="v">“distance 2.4 kilometers.”</div></div>
+  <div class="foot">Missing data (no heart rate without a Watch, say) is skipped, with no gap.</div>
+
+  <svg class="links" width="720" height="528" viewBox="0 0 720 528">
+    <g fill="none" stroke="#1D9E75" stroke-width="1.5">
+      <path d="M296 297 C 336 297, 336 189, 372 189"/>
+      <path d="M296 329 C 336 329, 336 251, 372 251"/>
+      <path d="M296 361 C 336 361, 336 375, 372 375"/>
+      <path d="M296 393 C 336 393, 336 437, 372 437"/>
+    </g>
+    <g fill="#1D9E75">
+      <circle cx="296" cy="297" r="4"/><circle cx="296" cy="329" r="4"/><circle cx="296" cy="361" r="4"/><circle cx="296" cy="393" r="4"/>
+    </g>
+  </svg>
+</div></body></html>

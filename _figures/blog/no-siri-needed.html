@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 604px; }
+.phone { position: absolute; top: 34px; width: 230px; }
+.lbl { position: absolute; top: 534px; width: 290px; text-align: center; }
+.lbl b { display: block; font-size: 15px; font-weight: 600; color: var(--green-900); }
+.lbl span { display: block; font-size: 12.5px; color: var(--paper-800); margin-top: 3px; }
+.num { font-style: normal; display: inline-flex; width: 20px; height: 20px; border-radius: 99px; background: var(--green-900); color: #fff; font-size: 11.5px; font-weight: 600; align-items: center; justify-content: center; margin-right: 6px; vertical-align: 2px; }
+svg.over { position: absolute; left: 0; top: 0; }
+</style></head><body><div class="canvas">
+  <div class="frame phone" style="left:100px"><div class="screen"><img src="run-classic.png"></div></div>
+  <div class="frame phone" style="left:390px"><div class="screen"><img src="run-locked.png"></div></div>
+
+  <div class="lbl" style="left:70px"><b><i class="num">1</i>Tap the speaker</b><span>next to Skip and Pause on the run screen</span></div>
+  <div class="lbl" style="left:360px"><b><i class="num">2</i>Locked? Hold the big number</b><span>no need to unlock mid-rep</span></div>
+
+  <svg class="over" width="720" height="604" viewBox="0 0 720 604">
+    <circle cx="258" cy="469" r="25" fill="none" stroke="#1D9E75" stroke-width="3"/>
+    <circle cx="258" cy="469" r="32" fill="none" stroke="#1D9E75" stroke-width="1.5" opacity="0.4"/>
+    <rect x="425" y="149" width="160" height="66" rx="33" fill="none" stroke="#1D9E75" stroke-width="3"/>
+    <rect x="418" y="142" width="174" height="80" rx="40" fill="none" stroke="#1D9E75" stroke-width="1.5" opacity="0.4"/>
+  </svg>
+</div></body></html>

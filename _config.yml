@@ -7,6 +7,15 @@ baseurl: ""
 
 app_store_url: "https://apps.apple.com/us/app/id6770997508"
 ga_measurement_id: "G-LZY2M1LLF5"
+# Web-only GA4 property (no iOS/Firebase stream). Fill in once created — the site
+# then dual-tags both IDs, so the combined property keeps feeding Google Ads while
+# this one stays 100% site traffic. Leave "" to keep single-tagging.
+ga_measurement_id_web: ""
+
+# Search Console ownership (Settings -> Ownership verification -> HTML tag).
+# Uncomment and paste the content="..." token, then push before hitting Verify.
+# webmaster_verifications:
+#   google: ""
 
 author:
   name: iRunning Team

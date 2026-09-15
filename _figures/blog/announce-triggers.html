@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 440px; }
+.top { position: absolute; left: 32px; top: 24px; }
+.t { position: absolute; left: 32px; width: 216px; height: 50px; background: #fff; border: 1px solid var(--paper-400); border-radius: 12px; padding: 7px 12px; }
+.t b { display: block; font-size: 14px; font-weight: 600; color: var(--green-900); line-height: 1.25; }
+.t span { display: block; font-size: 12px; color: var(--paper-600); line-height: 1.3; white-space: nowrap; }
+.t.hl { border-color: var(--green-400); box-shadow: 0 0 0 2px var(--green-50); }
+.t.auto { border-style: dashed; background: transparent; }
+.node { position: absolute; left: 300px; top: 197px; width: 120px; height: 72px; border-radius: 16px; background: var(--green-900); color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.node b { font-size: 14px; font-weight: 600; line-height: 1.2; }
+.node span { font-size: 11px; color: var(--green-100); margin-top: 3px; }
+.set { position: absolute; left: 282px; top: 62px; width: 156px; height: 62px; border: 1.5px dashed var(--amber-400); background: #FFFCF6; border-radius: 12px; padding: 9px 12px; text-align: center; }
+.set b { display: block; font-size: 13.5px; font-weight: 600; color: var(--amber-600); }
+.set span { display: block; font-size: 12px; color: var(--paper-800); margin-top: 2px; }
+.out { position: absolute; left: 500px; top: 156px; width: 192px; }
+.bubble { margin-top: 8px; background: #fff; border: 1px solid var(--paper-400); border-radius: 18px; border-top-left-radius: 6px; padding: 11px 13px; font-size: 14px; line-height: 1.42; color: var(--green-900); }
+svg.over { position: absolute; left: 0; top: 0; }
+</style></head><body><div class="canvas">
+  <div class="cap top">Every way to ask</div>
+
+  <div class="t hl" style="top:58px"><b>Action Button</b><span>press &amp; hold</span></div>
+  <div class="t" style="top:118px"><b>Siri</b><span>“announce my run in iRunning”</span></div>
+  <div class="t" style="top:178px"><b>Live Activity</b><span>speaker button while running</span></div>
+  <div class="t" style="top:238px"><b>Run screen</b><span>speaker, or hold the big number</span></div>
+  <div class="t" style="top:298px"><b>Controls</b><span>Control Center or Lock Screen</span></div>
+  <div class="t auto" style="top:358px"><b>Auto-announce</b><span>every few minutes or kilometers</span></div>
+
+  <div class="set"><b>What to announce</b><span>your fields, your order</span></div>
+  <div class="node"><b>Announce<br>my run</b><span>same every time</span></div>
+
+  <div class="out">
+    <div class="cap">One sentence</div>
+    <div class="bubble">“1 minute 48 left in Run, heart rate 162, zone 4, pace 4:52 per kilometer, distance 2.4 kilometers.”</div>
+  </div>
+
+  <svg class="over" width="720" height="440" viewBox="0 0 720 440">
+    <defs>
+      <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0F6E56"/></marker>
+      <marker id="ahA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#BA7517"/></marker>
+    </defs>
+    <g fill="none" stroke="#0F6E56" stroke-width="1.5">
+      <path d="M248 83 C 280 83, 262 233, 284 233" stroke="#1D9E75" stroke-width="2.2"/>
+      <path d="M248 143 C 276 143, 262 233, 284 233"/>
+      <path d="M248 203 C 272 203, 262 233, 284 233"/>
+      <path d="M248 263 C 272 263, 262 233, 284 233"/>
+      <path d="M248 323 C 276 323, 262 233, 284 233"/>
+      <path d="M248 383 C 280 383, 262 233, 284 233" stroke-dasharray="4 3"/>
+    </g>
+    <path d="M284 233 L 298 233" stroke="#0F6E56" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+    <path d="M360 124 L 360 195" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="4 3" fill="none" marker-end="url(#ahA)"/>
+    <text x="368" y="164" font-size="11.5" fill="#854F0B" font-family="-apple-system, sans-serif">shapes</text>
+    <path d="M420 233 L 498 233" stroke="#0F6E56" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+    <text x="459" y="224" font-size="11" fill="#444441" text-anchor="middle" font-family="-apple-system, sans-serif">spoken if</text>
+    <text x="459" y="250" font-size="11" fill="#444441" text-anchor="middle" font-family="-apple-system, sans-serif">Voice cues on</text>
+  </svg>
+</div></body></html>

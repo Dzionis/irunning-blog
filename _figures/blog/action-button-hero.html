@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 560px; }
+.phone { position: absolute; left: 214px; top: 38px; width: 230px; }
+.btn { position: absolute; left: 205px; width: 11px; border-radius: 3px 0 0 3px; background: #0B4A3E; }
+.btn.action { top: 150px; height: 34px; background: var(--green-400);  }
+.btn.v1 { top: 208px; height: 52px; }
+.btn.v2 { top: 272px; height: 52px; }
+.call { position: absolute; left: 20px; top: 136px; width: 138px; text-align: right; }
+.call b { display: block; font-size: 21px; font-weight: 600; color: var(--green-900); line-height: 1.15; }
+.call span { display: block; font-size: 13px; color: var(--paper-800); margin-top: 4px; line-height: 1.35; }
+.was { position: absolute; left: 20px; top: 360px; width: 160px; text-align: right; font-size: 12.5px; color: var(--paper-600); line-height: 1.4; }
+.was s { color: var(--paper-600); }
+.hear { position: absolute; left: 478px; top: 120px; width: 214px; }
+.bubble { margin-top: 8px; background: #fff; border: 1px solid var(--paper-400); border-radius: 18px; border-top-left-radius: 6px; padding: 12px 14px; font-size: 15px; line-height: 1.42; color: var(--green-900); }
+.chips { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.chip { display: inline-flex; align-self: flex-start; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 99px; background: var(--green-50); color: var(--green-800); font-size: 12.5px; font-weight: 500; }
+.d { width: 6px; height: 6px; border-radius: 9px; background: var(--green-400); display: inline-block; }
+svg.over { position: absolute; left: 0; top: 0; }
+</style></head><body><div class="canvas">
+  <div class="btn action"></div><div class="btn v1"></div><div class="btn v2"></div>
+  <div class="frame phone"><div class="screen"><img src="run-locked.png"></div></div>
+
+  <div class="call"><b>Press &amp; hold</b><span>the Action Button, even through a pocket</span></div>
+  <div class="was">On iPhone 15 Pro and later, this is where the silent switch used to be.</div>
+
+  <div class="hear">
+    <div class="cap">You hear</div>
+    <div class="bubble">“13 seconds left in Run, heart rate 158, zone 4, target 150 to 165, pace 5:33 per kilometer, distance 510 meters.”</div>
+    <div class="chips">
+      <span class="chip"><i class="d"></i>Works with the screen off</span>
+      <span class="chip"><i class="d"></i>Music dips, never stops</span>
+    </div>
+  </div>
+
+  <svg class="over" width="720" height="560" viewBox="0 0 720 560">
+    <!-- callout leader to the button -->
+    
+    <!-- press pulses -->
+    <g fill="none" stroke="#1D9E75" stroke-linecap="round">
+      <path d="M192 154 A 16 16 0 0 0 192 180" stroke-width="2" opacity="0.9"/>
+      <path d="M182 146 A 26 26 0 0 0 182 188" stroke-width="2" opacity="0.5"/>
+    </g>
+    <!-- sound path from phone to bubble -->
+    <g fill="none" stroke="#1D9E75" stroke-width="1.8" stroke-linecap="round">
+      <path d="M452 196 A 9 9 0 0 1 452 214" />
+      <path d="M459 188 A 18 18 0 0 1 459 222" opacity="0.6"/>
+    </g>
+  </svg>
+</div></body></html>

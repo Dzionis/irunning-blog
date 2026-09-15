@@ -1,0 +1,32 @@
+<!doctype html><html class="m"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 668px; padding: 24px 20px; }
+h3 { font-size: 18px; font-weight: 600; color: var(--green-900); line-height: 1.25; margin: 6px 0 14px; }
+.slice { position: relative; width: 360px; height: 212px; overflow: hidden; border-radius: 16px; border: 1px solid var(--paper-400); background: var(--paper-200); }
+.slice img { width: 360px; display: block; margin-top: -309px; }
+.badge { font-style: normal; position: absolute; width: 22px; height: 22px; border-radius: 99px; background: var(--green-400); color: #fff; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px #fff; }
+.slice .badge { right: 10px; }
+.segs { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.seg { position: relative; height: 50px; background: #fff; border: 1px solid var(--paper-400); border-radius: 12px; padding: 6px 12px 0 44px; }
+.seg .badge { left: 11px; top: 13px; box-shadow: none; }
+.seg .k { font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-600); }
+.seg .v { font-size: 15px; color: var(--green-900); margin-top: 2px; white-space: nowrap; }
+.seg.extra { border-style: dashed; border-color: var(--amber-400); background: #FFFCF6; }
+.seg.extra .k { color: var(--amber-600); }
+.seg.extra .badge { background: var(--amber-400); }
+.foot { margin-top: 12px; font-size: 12.5px; color: var(--paper-600); line-height: 1.4; }
+</style></head><body><div class="canvas">
+  <div class="cap">What to announce</div>
+  <h3>Your list, in order, becomes one sentence</h3>
+  <div class="slice"><img src="announce.png">
+    <i class="badge" style="top:40px">1</i><i class="badge" style="top:86px">2</i><i class="badge" style="top:133px">3</i><i class="badge" style="top:179px">4</i>
+  </div>
+  <div class="segs">
+    <div class="seg"><i class="badge">1</i><div class="k">Remaining</div><div class="v">“1 minute 48 left in Run,”</div></div>
+    <div class="seg"><i class="badge">2</i><div class="k">Heart rate</div><div class="v">“heart rate 162, zone 4,”</div></div>
+    <div class="seg extra"><i class="badge">+</i><div class="k">Also say · Target band</div><div class="v">“target 155 to 168,”</div></div>
+    <div class="seg"><i class="badge">3</i><div class="k">Pace</div><div class="v">“pace 4:52 per kilometer,”</div></div>
+    <div class="seg"><i class="badge">4</i><div class="k">Distance</div><div class="v">“distance 2.4 kilometers.”</div></div>
+  </div>
+  <div class="foot">Reorder the list and the sentence follows. Missing data is skipped, with no gap.</div>
+</div></body></html>

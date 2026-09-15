@@ -1,0 +1,52 @@
+<!doctype html><html class="m"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 782px; padding: 26px 20px; }
+.title { font-size: 18px; font-weight: 600; color: var(--green-900); }
+.legend { display: flex; gap: 14px; margin: 8px 0 18px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--paper-800); }
+.dot { width: 9px; height: 9px; border-radius: 99px; display: inline-block; }
+.moment { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--paper-600); margin: 18px 0 8px; }
+.moment b { font-weight: 600; color: var(--green-900); }
+.moment::after { content: ""; flex: 1; height: 1px; background: var(--paper-400); }
+.pin { width: 10px; height: 10px; border-radius: 99px; border: 2px solid var(--green-400); background: #fff; flex: none; }
+.talk { display: flex; flex-direction: column; gap: 7px; }
+.b { max-width: 310px; padding: 9px 13px; border-radius: 17px; font-size: 15px; line-height: 1.4; }
+.b svg { vertical-align: -2px; margin-right: 6px; }
+.you { align-self: flex-end; background: var(--green-900); color: #fff; border-bottom-right-radius: 6px; }
+.you em { font-style: normal; color: var(--green-100); }
+.app { align-self: flex-start; background: #fff; border: 1px solid var(--paper-400); color: var(--green-900); border-bottom-left-radius: 6px; }
+.siri { align-self: flex-start; background: var(--paper-200); color: var(--paper-800); border-bottom-left-radius: 6px; }
+</style></head><body><div class="canvas">
+  <div class="title">One run, no touching the phone</div>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--green-900)"></i>You say</span>
+    <span><i class="dot" style="background:#fff;border:1px solid var(--paper-400)"></i>iRunning's voice</span>
+    <span><i class="dot" style="background:var(--paper-200);border:1px solid var(--paper-400)"></i>Siri</span>
+  </div>
+
+  <div class="moment"><i class="pin"></i><b>0:00</b> at the door</div>
+  <div class="talk">
+    <div class="b you">“Siri, <em>start a run</em> in iRunning”</div>
+    <div class="b siri">Starting Tuesday 400s.</div>
+  </div>
+
+  <div class="moment"><i class="pin"></i><b>14:08</b> mid-rep</div>
+  <div class="talk">
+    <div class="b you">“Siri, <em>announce my run</em> in iRunning”</div>
+    <div class="b app"><svg width="15" height="15" viewBox="0 0 16 16"><path d="M2 6h3l4-3v10l-4-3H2z" fill="#1D9E75"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.5a6.5 6.5 0 0 1 0 9" stroke="#1D9E75" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>1 minute 48 left in Run, heart rate 162, zone 4, target 155 to 168, pace 4:52 per kilometer, distance 2.4 kilometers.</div>
+  </div>
+
+  <div class="moment"><i class="pin" style="border-color:var(--amber-400)"></i><b>21:30</b> red light</div>
+  <div class="talk">
+    <div class="b you">“Siri, <em>pause my run</em> in iRunning”</div>
+    <div class="b app"><svg width="15" height="15" viewBox="0 0 16 16"><path d="M2 6h3l4-3v10l-4-3H2z" fill="#1D9E75"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.5a6.5 6.5 0 0 1 0 9" stroke="#1D9E75" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Paused</div>
+  </div>
+
+  <div class="moment"><i class="pin" style="border-color:var(--coral-400)"></i><b>33:12</b> back home</div>
+  <div class="talk">
+    <div class="b you">“Siri, <em>finish my run</em> in iRunning”</div>
+    <div class="b siri">Finish this run?</div>
+    <div class="b you">“Yes”</div>
+    <div class="b app"><svg width="15" height="15" viewBox="0 0 16 16"><path d="M2 6h3l4-3v10l-4-3H2z" fill="#1D9E75"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.5a6.5 6.5 0 0 1 0 9" stroke="#1D9E75" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Workout complete. Thanks for using iRunning.</div>
+  </div>
+</div></body></html>

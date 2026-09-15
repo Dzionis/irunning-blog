@@ -135,6 +135,10 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 
 **8 launch posts** (May–Aug 2026, biweekly): interval builder, Apple Watch, heart rate zones, voice cues, training plans, 2026 running trends, autumn 2026 marathon calendar (Berlin Sep 27 / Chicago Oct 11 / NYC Nov 1 — verified Aug 2026), v1.1.1 release notes.
 
+**Sep 2026 how-to posts** (iRunning 1.2 App Intents, facts taken from `irunning-ios/irunning/AppIntents/`): Siri phrases + Shortcuts actions (`siri-shortcuts-hands-free-running`), "Announce my run" on the Action Button / Back Tap / Control Center (`action-button-announce-my-run`). The two cross-link via `post_url`. Re-check them if intent phrases, the announce settings path (Settings › Customise › Run screen › What to announce) or the iOS 18 minimum change.
+
+**Post figures** live in `assets/images/blog/` (PNG @2x, 1440px wide + a 800px `-mobile` variant served via `<picture>` under 560px, because text in a 720px figure is unreadable at phone width). Styled by `.post-figure` in `main.css`. Sources are HTML pages in `_figures/blog/` (Jekyll ignores the folder); re-render one with `_figures/blog/render.sh <name>` (headless Chrome, height read from `.canvas`). The app screens inside them (`announce.png`, `run-classic.png`, `run-locked.png`) were captured without any tapping via the app's DEBUG launch flag: `xcrun simctl launch <udid> interval.irunning --debug-run-display announce` (also `classic --target hr`, `classicLock --locked`, `pickerRun`, `pickerLocked`; see `RunDisplayDebugScreen.swift`). Launch iRunning right after another app and iOS adds a "◂ Settings" back-link to the status bar, so terminate other apps first.
+
 **Content strategy:** benefit-focused articles targeting long-tail keywords (interval running app, couch to 5K Apple Watch, heart rate zones running, run walk method). Every post ends with the automatic App Store CTA. Release posts translate ASO "What's New" into blog form.
 
 ---

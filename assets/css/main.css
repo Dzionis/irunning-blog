@@ -634,6 +634,20 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; }
   color: var(--text-primary);
 }
 .post-content td { padding: 10px 12px; border: 1px solid var(--border); }
+.post-figure { margin: 32px 0; }
+.post-figure img {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--paper-100);
+}
+.post-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  text-align: center;
+}
 
 /* Post CTA box */
 .post-cta {
