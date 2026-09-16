@@ -151,7 +151,7 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 - Generated photos (Gemini / Nano Banana) and their exact prompts: `_figures/blog/PROMPTS.md`. Illustration only, never presented as a real user.
 - Mobile: wide post tables scroll inside themselves under 480px (`main.css`).
 
-**Backlog of article ideas:** `CONTENT_PLAN.md` (priorities, keywords, free/Pro facts, what's unreleased). Move a topic to its "published" line after posting.
+**Backlog of article ideas:** `../irunning-marketing/plans/CONTENT_PLAN.md` and `KEYWORD_RESEARCH.md` in the private marketing repo (priorities, keywords, free/Pro facts). Move a topic to its "published" line there after posting. Keep plans and drafts out of this public repo.
 
 **Content strategy:** benefit-focused articles targeting long-tail keywords (interval running app, couch to 5K Apple Watch, heart rate zones running, run walk method). Every post ends with the automatic App Store CTA. Release posts translate ASO "What's New" into blog form.
 

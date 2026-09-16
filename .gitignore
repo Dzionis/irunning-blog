@@ -14,3 +14,8 @@ Gemfile.lock
 
 # macOS
 .DS_Store
+
+# Marketing plans, drafts and assets live in the private irunning-marketing repo
+social/
+CONTENT_PLAN.md
+KEYWORD_RESEARCH.md

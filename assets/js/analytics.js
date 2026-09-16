@@ -12,7 +12,7 @@
     if (searchParams.has('gclid') || searchParams.get('utm_medium') === 'cpc') {
       sessionStorage.setItem('irun_ct', 'pmax');
     } else if (utmSource) {
-      // Visits from social links (see social/links.md) → ct=web-instagram etc.
+      // Visits from social links with utm_source → ct=web-instagram etc.
       sessionStorage.setItem('irun_ct', 'web-' + utmSource);
     }
     var ct = sessionStorage.getItem('irun_ct') || 'website';
