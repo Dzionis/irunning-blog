@@ -3,7 +3,6 @@ title: "Zone 2 Running: How to Build an Aerobic Base Without Overthinking It"
 description: "What zone 2 actually is, how to find yours, why it feels too slow, and an 8-week plan that proves it works: the same 5K, at the same heart rate, faster."
 categories: [training]
 date: 2026-09-06 09:00:00
-published: false
 image:
   path: /assets/images/blog/zone2-hero.jpg
   width: 1264

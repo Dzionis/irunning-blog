@@ -3,7 +3,6 @@ title: "Turn Your Run Into a Video for Instagram Stories and TikTok"
 description: "iRunning now turns any GPS run into an animated route replay, with your distance, pace, time and heart rate counting up as you go. Five styles, 3D maps, and it's free."
 categories: [features]
 date: 2026-09-14 09:00:00
-published: false
 image:
   path: /assets/images/blog/video-styles.jpg
   width: 1440

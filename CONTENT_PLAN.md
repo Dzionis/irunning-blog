@@ -3,11 +3,11 @@
 Список тем для статей, собранный 2026-09-15 по коду `irunning-ios` (версия 1.2.2, в ревью) и `ASO_LOCALIZATIONS.md`.
 Статьи пишутся на английском. Заголовки ниже — рабочие. Ключевые запросы — гипотезы; проверенные данные по частотности, трендам и ранжированный список из 30 тем — в `KEYWORD_RESEARCH.md` (2026-09-16). При выборе следующей статьи начинать с него.
 
-**Уже опубликовано (12):** interval builder · Apple Watch без телефона · HR zones · voice cues · планы walk→5K · тренды 2026 · осенние марафоны · релиз 1.1.1 · Siri & Shortcuts · Action Button · transparent overlays (#4) · import from NRC/Strava/Garmin (#6) · AI workout builder (#9) · life happens: pause/move/restart (#10). Первая десятка закрыта.
+**Уже опубликовано (20):** interval builder · Apple Watch без телефона · HR zones · voice cues · планы walk→5K · тренды 2026 · осенние марафоны · релиз 1.1.1 · Siri & Shortcuts · Action Button · transparent overlays (#4) · import from NRC/Strava/Garmin (#6) · AI workout builder (#9) · life happens: pause/move/restart (#10) · Sub-30 5K (#1) · Japanese Walking (#2) · run video (#3) · Zone 2 (#5) · treadmill (#7) · релиз 1.2.2 (#8). Первая десятка закрыта.
 
-**Написано, ждёт выхода 1.2.2 (`published: false`):** #1 Sub-30 5K · #2 Japanese Walking · #3 run video · #5 Zone 2 · #7 treadmill · #8 релиз 1.2.2 (дату поставить в день выхода).
+**1.2.2 вышла в App Store 2026-09-16.** Все ⏳-пометки ниже сняты по смыслу: планы и функции из 1.2.2 уже в приложении, писать можно про всё. Следующие темы брать из `KEYWORD_RESEARCH.md`.
 
-Статус: ✅ можно писать сейчас · ⏳ после выхода 1.2.2 в App Store.
+Статус: ✅ можно писать сейчас · ⏳ (исторически) — ждало 1.2.2, теперь тоже ✅.
 
 Категории (с 2026-09-15 их шесть): `features` — новая функция, `guides` — пошаговая инструкция, `training` — тренировочный гайд вокруг плана или метода, `events`, `news`, `releases`. В таблицах ниже «features» у how-to и планов читать как `guides` / `training`.
 

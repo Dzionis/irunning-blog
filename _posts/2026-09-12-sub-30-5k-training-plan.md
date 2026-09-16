@@ -3,7 +3,6 @@ title: "Sub-30 5K: An 8-Week Plan to Break 30 Minutes"
 description: "Breaking 30 minutes for 5K means holding 6:00 per kilometre. Here's how an eight-week plan teaches that pace, week by week, and why most of your running should still feel easy."
 categories: [training]
 date: 2026-09-12 09:00:00
-published: false
 image:
   path: /assets/images/blog/sub30-hero.jpg
   width: 1264

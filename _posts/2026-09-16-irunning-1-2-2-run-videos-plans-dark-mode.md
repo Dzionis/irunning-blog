@@ -2,8 +2,7 @@
 title: "iRunning 1.2.2: Run Videos, 20 New Training Plans, Dark Mode"
 description: "The new version turns any run into a shareable route video, doubles the training-plan catalog, adds a dark theme, and makes treadmill runs and Apple Health syncing smarter."
 categories: [releases]
-date: 2026-09-15 09:00:00
-published: false
+date: 2026-09-16 09:00:00
 image:
   path: /assets/images/blog/video-styles.jpg
   width: 1440

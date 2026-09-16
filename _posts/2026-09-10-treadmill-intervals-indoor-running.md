@@ -3,7 +3,6 @@ title: "Treadmill Intervals That Don't Feel Like a Hamster Wheel"
 description: "Structure is what makes a treadmill session fly by. Eight ready-made belt workouts, a six-week winter plan, and how iRunning's Indoor mode handles a run with no GPS."
 categories: [training]
 date: 2026-09-10 09:00:00
-published: false
 image:
   path: /assets/images/blog/treadmill-hero.jpg
   width: 1024

@@ -3,7 +3,6 @@ title: "Japanese Walking: The 3-Minute Interval Walk, Explained"
 description: "Three minutes fast, three minutes easy, five times over. What Japanese walking actually is, what the research behind it found, and how to turn it into an eight-week habit."
 categories: [training]
 date: 2026-09-09 09:00:00
-published: false
 image:
   path: /assets/images/blog/japanese-walking-hero.jpg
   width: 1024
