@@ -4,13 +4,21 @@
   // whole visit. Runs before the gtag guard so links get tagged even when
   // analytics is blocked.
   try {
+    // App Store Connect provider token (pt=… in a generated campaign link).
+    // Without it App Store Connect does not attribute installs to ct.
+    var PROVIDER_TOKEN = '1239441';
     var searchParams = new URLSearchParams(window.location.search);
+    var utmSource = (searchParams.get('utm_source') || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20);
     if (searchParams.has('gclid') || searchParams.get('utm_medium') === 'cpc') {
       sessionStorage.setItem('irun_ct', 'pmax');
+    } else if (utmSource) {
+      // Visits from social links (see social/links.md) → ct=web-instagram etc.
+      sessionStorage.setItem('irun_ct', 'web-' + utmSource);
     }
     var ct = sessionStorage.getItem('irun_ct') || 'website';
     document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (link) {
       var url = new URL(link.href);
+      if (PROVIDER_TOKEN) url.searchParams.set('pt', PROVIDER_TOKEN);
       url.searchParams.set('ct', ct);
       url.searchParams.set('mt', '8');
       link.href = url.toString();

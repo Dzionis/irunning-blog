@@ -51,4 +51,5 @@ exclude:
   - DESIGN_SYSTEM.md
   - CONTENT_PLAN.md
   - KEYWORD_RESEARCH.md
+  - social/
   - vendor/
