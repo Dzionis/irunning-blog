@@ -1,0 +1,88 @@
+<!doctype html><html class="m"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas { height: 916px; padding: 26px 22px; }
+h3 { font-size: 18px; font-weight: 600; color: var(--green-900); margin: 6px 0 4px; line-height: 1.25; }
+p.sub { font-size: 12.5px; color: var(--paper-800); line-height: 1.35; }
+svg { position: absolute; left: 0; top: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+</style></head><body><div class="canvas">
+  <div class="cap">Berlin Marathon · the course</div>
+  <h3>Drink stations left, landmarks right</h3>
+  <p class="sub">Landmark kilometres are approximate. Drink stations are from the official course page.</p>
+  <svg width="400" height="916" viewBox="0 0 400 916">
+    <rect x="150" y="150" width="10" height="684" rx="5" fill="#1D9E75"/>
+    <rect x="150" y="490.0" width="10" height="4" fill="#fff"/>
+    <text x="168" y="496.0" font-size="11" font-weight="600" fill="#0F6E56">half</text>
+    <circle cx="155" cy="150" r="9" fill="#04342C"/>
+    <circle cx="155" cy="834" r="9" fill="#D85A30"/>
+    <text x="170" y="140" font-size="12.5" font-weight="600" fill="#04342C">Start · Straße des 17. Juni</text>
+    <text x="170" y="858" font-size="12.5" font-weight="600" fill="#04342C">Finish · past the Gate</text>
+
+    <!-- landmarks hang off the right side of the route -->
+    <g stroke="#B4B2A9" stroke-width="1">
+      <line x1="160" y1="166.2" x2="172" y2="166.2"/>
+      <line x1="160" y1="279.7" x2="172" y2="279.7"/>
+      <line x1="160" y1="393.2" x2="172" y2="393.2"/>
+      <line x1="160" y1="603.9" x2="172" y2="603.9"/>
+      <line x1="160" y1="684.9" x2="172" y2="684.9"/>
+      <line x1="160" y1="766.0" x2="172" y2="766.0"/>
+      <line x1="160" y1="814.6" x2="172" y2="814.6"/>
+    </g>
+    <g font-size="12.5" fill="#04342C" font-weight="600">
+      <text x="178" y="170.2">Victory Column</text>
+      <text x="178" y="283.7">Oranienburger Tor</text>
+      <text x="178" y="397.2">Kottbusser Tor</text>
+      <text x="178" y="607.9">Wilder Eber</text>
+      <text x="178" y="688.9">Kurfürstendamm</text>
+      <text x="178" y="770.0">Potsdamer Platz</text>
+      <text x="178" y="818.6">Unter den Linden</text>
+    </g>
+    <g font-size="11" fill="#888780">
+      <text x="178" y="184.2">≈ km 1</text>
+      <text x="178" y="297.7">≈ km 8</text>
+      <text x="178" y="411.2">≈ km 15, then Hermannplatz</text>
+      <text x="178" y="621.9">≈ km 28 · big crowds</text>
+      <text x="178" y="702.9">km 33 · Olivaer Platz</text>
+      <text x="178" y="784.0">≈ km 38</text>
+      <text x="178" y="832.6">≈ km 41, then the Gate</text>
+    </g>
+
+    <!-- drink stations hang off the left side, each on its own stem -->
+    <g stroke="#B4B2A9" stroke-width="1">
+      <line x1="150" y1="231.1" x2="128" y2="231.1"/>
+      <line x1="150" y1="295.9" x2="128" y2="295.9"/>
+      <line x1="150" y1="344.5" x2="128" y2="344.5"/>
+      <line x1="150" y1="393.2" x2="128" y2="393.2"/>
+      <line x1="150" y1="433.7" x2="128" y2="433.7"/>
+      <line x1="150" y1="474.2" x2="128" y2="474.2"/>
+      <line x1="150" y1="514.7" x2="128" y2="514.7"/>
+      <line x1="150" y1="555.3" x2="128" y2="555.3"/>
+      <line x1="150" y1="595.8" x2="128" y2="595.8"/>
+      <line x1="150" y1="636.3" x2="128" y2="636.3"/>
+      <line x1="150" y1="676.8" x2="128" y2="676.8"/>
+      <line x1="150" y1="709.3" x2="128" y2="709.3"/>
+      <line x1="150" y1="733.6" x2="128" y2="733.6"/>
+      <line x1="150" y1="766.0" x2="128" y2="766.0"/>
+      <line x1="150" y1="798.4" x2="128" y2="798.4"/>
+    </g>
+    <g fill="#fff" stroke="#0F6E56" stroke-width="2">
+      <circle cx="122" cy="231.1" r="5.5"/><circle cx="122" cy="344.5" r="5.5"/><circle cx="122" cy="433.7" r="5.5"/><circle cx="122" cy="514.7" r="5.5"/><circle cx="122" cy="595.8" r="5.5"/><circle cx="122" cy="676.8" r="5.5"/><circle cx="122" cy="709.3" r="5.5"/><circle cx="122" cy="766.0" r="5.5"/><circle cx="122" cy="798.4" r="5.5"/>
+    </g>
+    <g fill="#BA7517">
+      <circle cx="122" cy="295.9" r="5.5"/><circle cx="122" cy="393.2" r="5.5"/><circle cx="122" cy="474.2" r="5.5"/><circle cx="122" cy="555.3" r="5.5"/><circle cx="122" cy="636.3" r="5.5"/><circle cx="122" cy="733.6" r="5.5"/>
+    </g>
+    <g font-size="10.5" fill="#888780" text-anchor="end">
+      <text x="110" y="235.1">5</text><text x="110" y="299.9">9</text><text x="110" y="348.5">12</text><text x="110" y="397.2">15</text><text x="110" y="437.7">17.5</text><text x="110" y="478.2">20</text><text x="110" y="518.7">22.5</text><text x="110" y="559.3">25</text><text x="110" y="599.8">27.5</text><text x="110" y="640.3">30</text><text x="110" y="680.8">32.5</text><text x="110" y="713.3">34.5</text><text x="110" y="737.6">36</text><text x="110" y="770.0">38</text><text x="110" y="802.4">40</text>
+    </g>
+    <text x="110" y="136" font-size="10.5" fill="#888780" text-anchor="end">km</text>
+    <rect x="62" y="589.8" width="12" height="12" rx="3" fill="#D85A30"/>
+    <line x1="74" y1="595.8" x2="84" y2="595.8" stroke="#D85A30" stroke-width="1"/>
+    <text x="56" y="599.8" font-size="11" fill="#444441" text-anchor="end">gel</text>
+
+    <!-- legend -->
+    <g font-size="11.5" fill="#444441">
+      <circle cx="26" cy="884" r="5.5" fill="#fff" stroke="#0F6E56" stroke-width="2"/><text x="40" y="888">Water only</text>
+      <circle cx="26" cy="906" r="5.5" fill="#BA7517"/><text x="40" y="910">Water, fruit, tea and Maurten drink</text>
+      <rect x="290" y="878" width="12" height="12" rx="3" fill="#D85A30"/><text x="308" y="888">Maurten gel</text>
+    </g>
+  </svg>
+</div></body></html>
