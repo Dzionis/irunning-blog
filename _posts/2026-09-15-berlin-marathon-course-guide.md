@@ -57,15 +57,16 @@ The route is a single loop through the city. You start and finish in the Tiergar
 
 Berlin has a lot of them, and they come at fixed points:
 
-| Station | Kilometres |
+| What's handed out | Kilometres |
 |---|---|
 | **Water** | 5, 12, 17.5, 22.5, 27.5, 32.5, 34.5, 38, 40 |
-| **Water, fruit, tea and Maurten drink mix** | 9, 15, 20, 25, 30, 36 |
-| **Maurten gel** | 27.5 |
+| **Fruit, tea and water** | 9, 15, 20, 25, 30, 36 |
+| **Maurten Drink Mix 160** | 9, 15, 20, 25, 30, 36 |
+| **Maurten Gel 100** | 27.5 |
 
-At km 33 there's also VILSA mineral water, and there are BRITA refill points for your own bottle or hydration pack. You can drop off your own drinks until 7:45 on race morning.
+So six of the stations are the full ones: fruit, tea, water and Maurten Drink Mix 160, the carbohydrate drink. The other nine hand out water only. At km 33 there's also VILSA mineral water, and there are BRITA refill points for your own bottle or hydration pack. You can drop off your own drinks until 7:45 on race morning.
 
-There's only **one gel station**. If you haven't trained with Maurten gels, carry the gels you *have* trained with. A new gel at km 27.5 is a gamble you don't need.
+There's only **one gel station**, at km 27.5, and it's Maurten Gel 100. If you haven't trained with it, carry the gels you *have* trained with. A new gel at km 27.5 is a gamble you don't need.
 
 Race rules worth knowing: **only open-ear headphones** are allowed. Hydration packs up to 3 litres are fine, backpacks are not.
 

@@ -82,7 +82,7 @@ Eat breakfast about three hours before your start: the same breakfast you tested
 ## Sleep and small things
 
 - **The night before the race matters less than the two nights before it.** Nerves often wreck the last night. Sleep well on Thursday and Friday and you're covered.
-- **Don't try anything new.** No new shoes, new gels, new sports massage or new breakfast. Berlin's drink stations hand out Maurten drink mix and, at km 27.5, a Maurten gel. If you haven't trained with them, carry your own.
+- **Don't try anything new.** No new shoes, new gels, new sports massage or new breakfast. Berlin's drink stations hand out Maurten Drink Mix 160 and, at km 27.5, a Maurten Gel 100. If you haven't trained with them, carry your own.
 - **Watch out for taper aches.** Running less often brings on odd little aches, the famous "phantom pains". They almost always disappear once you start running on Sunday.
 - **Trim your toenails** two or three days before, not the night before.
 
