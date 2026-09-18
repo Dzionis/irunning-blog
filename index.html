@@ -294,7 +294,8 @@ image:
 </section>
 
 <!-- Blog Preview -->
-{% if site.posts.size > 0 %}
+{% assign visible_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+{% if visible_posts.size > 0 %}
 <section class="blog-preview">
   <div class="container">
     <div class="blog-preview-header">
@@ -302,7 +303,7 @@ image:
       <a href="{{ '/blog/' | relative_url }}" class="link-more">All articles →</a>
     </div>
     <div class="posts-grid">
-      {% for post in site.posts limit:3 %}
+      {% for post in visible_posts limit:3 %}
       <a href="{{ post.url | relative_url }}" class="post-card"
          data-ga-event="blog_post_click" data-ga-location="homepage_blog_preview" data-ga-post-title="{{ post.title }}">
         <div class="post-card-meta">

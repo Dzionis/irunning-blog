@@ -1,0 +1,23 @@
+# Rebuilds the GitHub Pages site every day so that posts dated in the future
+# show up in the blog, homepage, feed and sitemap once their date arrives.
+# (Future posts are always built and reachable by direct link — `future: true`.)
+name: Scheduled Pages rebuild
+
+on:
+  schedule:
+    - cron: "5 0 * * *" # 00:05 UTC daily
+  workflow_dispatch:
+
+permissions:
+  pages: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a Pages build
+        run: |
+          curl --fail-with-body -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/pages/builds

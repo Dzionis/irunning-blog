@@ -186,3 +186,7 @@ permalink: /blog/:year/:month/:title/
 - FAQ section, email capture, search
 - `pt=` provider token on App Store links (App Analytics campaign reporting needs it; get it from ASC → Analytics → Sources → generate campaign link)
 - Localized pages (app ships 28 locales; site is English-only)
+
+## Scheduled posts
+
+A post dated in the future is built (`future: true`) and reachable by its direct URL, but carries `noindex` and stays out of the blog listing, the homepage preview, `feed.xml` and `sitemap.xml` (all filter on `post.date <= site.time`). `.github/workflows/scheduled-rebuild.yml` asks GitHub Pages to rebuild daily at 00:05 UTC, so the post appears on its date without a push. Dates without a time are midnight UTC. `feed.xml` is our own copy of the jekyll-feed template (the plugin skips generation when the file exists) — keep the date filter if it's ever replaced. Note: the repo is public, so scheduled post sources are readable on GitHub before their date.

@@ -14,7 +14,8 @@ description: "App guides, running news, race calendars, and release notes from t
 <section class="blog-listing">
   <div class="container">
     <div class="posts-grid">
-      {% for post in site.posts %}
+      {% assign visible_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+      {% for post in visible_posts %}
       <a href="{{ post.url | relative_url }}" class="post-card"
          data-ga-event="blog_post_click" data-ga-location="blog_listing" data-ga-post-title="{{ post.title }}">
         <div class="post-card-meta">
