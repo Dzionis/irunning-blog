@@ -4,14 +4,19 @@ description: "A 16-week first-marathon plan with four runs a week, a long run th
 categories: [training]
 date: 2026-09-22 09:00:00
 image:
-  path: /assets/images/blog/marathon-long-run.png
-  width: 1440
-  height: 940
+  path: /assets/images/blog/first-marathon-hero.jpg
+  width: 1024
+  height: 687
 ---
 
 Autumn marathon season does something to people. You watch the finish line in Berlin, Chicago or New York, and a quiet thought arrives: *could I do that?*
 
 If you've already run a half marathon, the answer is very likely yes. What you need is time and patience. Sixteen weeks is the classic length for a first marathon plan: long enough to build the long run in small, safe steps, and short enough that you can still see the finish from week 1. Start now and race day lands in mid-January. Start in December and you're ready for the spring races.
+
+<figure class="post-figure photo">
+  <img src="{{ '/assets/images/blog/first-marathon-hero.jpg' | relative_url }}" width="1024" height="687" loading="lazy"
+       alt="A runner seen from behind on a long, tree-lined riverside path in early autumn light">
+</figure>
 
 This article walks through a 16-week plan in kilometres, using the **Marathon** plan in iRunning as the example. You can follow the structure on paper and with any watch. The app just saves you from doing the maths and remembering what today's session is.
 
