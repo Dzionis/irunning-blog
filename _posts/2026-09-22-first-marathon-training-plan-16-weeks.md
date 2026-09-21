@@ -148,6 +148,12 @@ Feeling flat, heavy or oddly nervous in the middle of a taper is normal. It isn'
 
 ## How the plan works in iRunning
 
+<figure class="post-figure">
+  <img src="{{ '/assets/images/blog/marathon-plan-screens.jpg' | relative_url }}" width="1440" height="1480" loading="lazy"
+       alt="Two iRunning screens: the Marathon plan overview with 16 weeks, 4 sessions a week and who the plan is for, and week 10 with an easy run, a 2 × 20 minute marathon-pace session, another easy run and a 145-minute long run with a steady finish">
+  <figcaption>Left: the plan overview. Right: week 10, the first peak week.</figcaption>
+</figure>
+
 - **Every run has a target.** Easy and long runs carry a zone 2 heart-rate target, and the zone turns into a bpm range from your own zone settings. With an Apple Watch or a Bluetooth chest strap, you hear *"Heart rate too high"* when an easy run quietly turns into a tempo. On a 2 h 30 long run, that voice is worth a lot.
 - **The session is read to you.** Voice cues tell you when each block starts and ends, including the switch to marathon pace at the end of the week 10 and week 13 long runs.
 - **Setup checks where you are.** It asks whether you've finished a half marathon. If not yet, it points you to the Half Marathon plan first.
