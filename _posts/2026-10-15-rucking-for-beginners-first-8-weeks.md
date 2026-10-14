@@ -3,7 +3,6 @@ title: "Rucking for Beginners: Your First 8 Weeks With a Pack"
 description: "Rucking is walking with weight on your back. How much to carry, how to pack it, how fast to go, and an eight-week plan that adds distance on odd weeks and weight on even weeks, never both at once."
 categories: [training]
 date: 2026-10-15 09:00:00
-published: false
 image:
   path: /assets/images/blog/rucking-hero.jpg
   width: 1024
