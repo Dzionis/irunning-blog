@@ -82,7 +82,7 @@ Moderately, and in the wrong places. The total climbing is around 100 m over the
 
 The first half is flat except for the bridge at the start. The second half has a climb every five miles. So the course rewards a first half that feels too easy, and punishes a first half that feels "about right".
 
-The practical version: run the first half 1–2% slower than your goal pace, expect to give back time on the Queensboro and Fifth Avenue, and plan to run even effort, not even splits. We'll go through the pacing in detail, with numbers, in a separate guide to pacing New York, coming on Tuesday.
+The practical version: run the first half 1–2% slower than your goal pace, expect to give back time on the Queensboro and Fifth Avenue, and plan to run even effort, not even splits. We'll go through the pacing in detail, with numbers, in a [separate guide to pacing New York]({% post_url 2026-10-20-how-to-pace-nyc-marathon %}).
 
 ## The weather
 
