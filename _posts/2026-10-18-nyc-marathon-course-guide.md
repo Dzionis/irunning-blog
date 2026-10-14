@@ -11,7 +11,7 @@ image:
 
 The TCS New York City Marathon is the biggest marathon in the world, with more than 50,000 finishers, and it is not a fast one. There's no world record to chase here. The course crosses five bridges, climbs about 50 m in the last 10 km, and turns more often than any other Major. What it has instead is the crowd: about two million people along the route, and a stretch on First Avenue that runners describe as a wall of sound.
 
-The race is on **Sunday, 1 November 2026**, and this year the route changes for the first time since 2011, in the Bronx. Here's what the course looks like, where you'll get water, and how to run a marathon that is really two different races: a flat first half and a hilly second one.
+The race is on **Sunday, 1 November 2026**. It's the 50th anniversary of the five-borough course, which first left Central Park in 1976, and this year the route changes for the first time since 2011, in the Bronx. Here's what the course looks like, where you'll get water, and how to run a marathon that is really two different races: a flat first half and a hilly second one.
 
 ## Race weekend at a glance
 
