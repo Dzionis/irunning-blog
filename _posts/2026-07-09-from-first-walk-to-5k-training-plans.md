@@ -1,6 +1,6 @@
 ---
 title: "From First Walk to 5K: How Training Plans Work in iRunning"
-description: "Structured, adaptive training plans that meet you where you are — starting with a walking plan that's completely free."
+description: "Structured training plans that meet you where you are — starting with a walk-to-run plan that's completely free."
 categories: [features]
 ---
 
@@ -12,14 +12,14 @@ That's what training plans in iRunning are for. Pick a goal, and every session i
 
 Each plan is a multi-week program of scheduled sessions, built from the same intervals the rest of the app runs:
 
-- **Start Walking** — the on-ramp. Brisk-walk sessions that build a habit before they build a runner. This plan is completely free.
-- **0→5K** — the classic journey from run/walk intervals to running 5 kilometers without stopping.
-- **5K→10K** — for runners who own the 5K and want to double it, mixing longer steady runs with quality sessions.
-- **Weight Loss Kickstart** — consistent, sustainable sessions built around time on feet, not punishing intensity.
+- **From Walk to Run** — the on-ramp. Six weeks, three sessions a week: brisk walks first, a 30-second jog in week 3, five-minute runs by the end. This plan is completely free.
+- **0→5K** — the classic nine-week journey from run/walk intervals to running 5 kilometers without stopping.
+- **First 10K** — for runners who own the 5K and want to double it, mixing longer steady runs with quality sessions.
+- **Running for Weight Loss** — consistent, sustainable sessions built around time on feet, not punishing intensity.
 
 ## What a plan session looks like
 
-A plan session is just a workout the app has already built for you. Week 3 of 0→5K might be: 5-minute warm-up walk, then 6× (90 seconds run / 2 minutes walk), 5-minute cool-down. You press start, and iRunning runs it like any other workout — voice cues, countdown beeps, the big number on the screen or your Watch, GPS tracking the whole way.
+A plan session is just a workout the app has already built for you. Week 2 of 0→5K might be: 5-minute warm-up walk, then 6× (90 seconds run / 2 minutes walk), 5-minute cool-down. You press start, and iRunning runs it like any other workout — voice cues, countdown beeps, the big number on the screen or your Watch, GPS tracking the whole way.
 
 No reading a table, no memorizing what week you're in. The plan remembers for you.
 
@@ -41,9 +41,9 @@ And because plans are built from ordinary iRunning workouts, nothing is locked a
 
 ## Which plan should you pick?
 
-- Haven't exercised in a while? **Start Walking.** It's free, and it works.
+- Haven't exercised in a while? **From Walk to Run.** It's free, and it works.
 - Can walk briskly for 30 minutes? **0→5K.**
-- Already running 5K comfortably? **5K→10K.**
-- Main goal is the scale, not the stopwatch? **Weight Loss Kickstart.**
+- Already running 5K comfortably? **First 10K.**
+- Main goal is the scale, not the stopwatch? **Running for Weight Loss.**
 
 The first session takes less than half an hour. The plan handles everything after that.
