@@ -292,7 +292,7 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; }
 .phone-screen-shot img { width: 100%; display: block; }
 
 /* ---- "Your session" strip (proportional bars) ---- */
-.timeline { padding: 24px 0 72px; }
+.timeline { padding: 24px 0 40px; }
 .mono-num {
   font-family: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-variant-numeric: tabular-nums;
@@ -342,7 +342,7 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; }
 }
 
 /* ---- Sections ---- */
-.section { padding: 80px 0; }
+.section { padding: 40px 0; }
 .eyebrow {
   display: inline-block;
   font-size: 0.75rem;
@@ -942,8 +942,8 @@ h1, h2, h3, h4 { color: var(--text-primary); font-weight: 600; }
   .post-content { margin-bottom: 40px; }
   .post-cta { padding: 28px 20px; }
   .bottom-cta-panel { padding: 48px 24px; }
-  .section { padding: 56px 0; }
-  .timeline { padding: 8px 0 48px; }
+  .section { padding: 32px 0; }
+  .timeline { padding: 8px 0 32px; }
   .session-card { padding: 22px 20px; }
   .session-grid { grid-template-columns: 88px 1fr 52px; gap: 10px 12px; font-size: 0.875rem; }
 }
