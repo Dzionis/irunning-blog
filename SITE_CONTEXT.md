@@ -49,6 +49,7 @@ Source of truth: `DESIGN_SYSTEM.md` (copied from the app repo). Web decisions:
 - Text: headings `#04342C` (green/900), body `#2C2C2A` (paper/900), secondary `#888780`
 - Accent `#1D9E75` (green/400), hover/pressed `#0F6E56` (green/600)
 - **No gradients** (flat paper), **no weight 700+** (400/500/600 only)
+- Soft green-tinted shadows (`--shadow-sm` / `--shadow-md`) only for lift on hover and the hero pill; surfaces stay flat at rest. Header gets its hairline + shadow only after scrolling (`.is-scrolled`, `site.js`)
 - Radii: 6 / 12 / 20 / 28 / 999 px (sm/md/lg/xl/full)
 - Stats/numbers use tabular numerics (`font-variant-numeric: tabular-nums`)
 - Category tag colors mirror the app's interval states:
@@ -75,9 +76,9 @@ Screens live in `assets/images/screens/` (screen-run, screen-plan, screen-summar
 Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero badge + "Your session" strip come from variant **V4 · Dimensional** in `Site - Main Page Variants.html` (V4's green disc was later removed in favor of a soft phone shadow); the watch card surface + CSS Apple Watch Ultra render (`.aw-*` classes) come from variant **A · Floating display** in `Site - Watch Block Variants.html`. The watch screen image is the simulator capture center-cropped to 401×496 (true display ratio), matching the design's `assets/watch-screen.png`.
 
 ```
-/               — Homepage (hero + real run screenshot with soft shadow, "Your session" proportional-bar strip, features, Watch, screens gallery, import/share, reviews, CTA, blog preview)
-/blog/          — Blog listing (all posts)
-/blog/:year/:month/:title/  — Individual posts
+/               — Homepage: hero ("New" pill → latest `releases` post, 4.9 / 41 plans / Free stats row, real run screenshot), "Your session" strip, blog (1 featured + 3 compact cards with image previews, #blog), features (#features), Watch (#watch), screens gallery (#screens), import/share, reviews, CTA
+/blog/          — Blog listing: newest post as a wide featured card, then a 3-column grid; category filter chips (counts), deep-linkable as /blog/#training
+/blog/:year/:month/:title/  — Individual posts: breadcrumb, author/date/read-time row, reading-progress bar, dark CTA, "Keep reading" (3 cards, same category first)
 /privacy/       — Privacy policy (covers GPS + HealthKit data; lists Firebase, Amplitude, Apphud, Facebook SDKs)
 /terms/         — Terms of service (incl. health/fitness disclaimer, subscriptions)
 /sitemap.xml    — manual Liquid template
@@ -91,8 +92,9 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 | `_layouts/default.html` | Base layout (header + footer + scripts) |
 | `_layouts/post.html` | Blog post layout with end-of-post CTA |
 | `_layouts/page.html` | Static pages (privacy, terms) |
-| `_includes/header.html` | Site header (icon + iRunning, nav: Blog, Get App) |
-| `_includes/footer.html` | Dark green footer (brand, nav links, copyright) |
+| `_includes/header.html` | Site header (icon + iRunning, nav: Features, Apple Watch — hidden under 768px — Blog, Get App) |
+| `_includes/footer.html` | Dark green footer: brand + download button, App / Blog (category deep links) / Legal columns |
+| `_includes/post-card.html` | Blog card with image preview; `variant` featured / compact; used by homepage, listing, "Keep reading" |
 | `_includes/seo-head.html` | jekyll-seo-tag + smart app banner (`apple-itunes-app` id 6770997508) + favicon |
 | `_includes/analytics.html` | GA4 gtag.js — auto-disabled while ID is the `G-XXXXXXXXXX` placeholder |
 
@@ -117,7 +119,8 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 | `cta_click` | Homepage bottom CTA "Start Running — Free" |
 | `footer_cta_click` | End-of-post CTA |
 | `app_store_click` | Header "Get App", footer "App Store" (also auto-fired alongside any event whose destination is apps.apple.com) |
-| `blog_post_click` | Blog cards (homepage preview + listing) |
+| `blog_post_click` | Blog cards (`homepage_blog_preview`, `blog_listing`, `post_related`) |
+| `release_pill_click` | Hero "New · iRunning x.y.z" pill |
 | `scroll_90` | 90% scroll depth |
 
 ---
@@ -138,6 +141,8 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 **8 launch posts** (May–Aug 2026, biweekly): interval builder, Apple Watch, heart rate zones, voice cues, training plans, 2026 running trends, autumn 2026 marathon calendar (Berlin Sep 27 / Chicago Oct 11 / NYC Nov 1 — verified Aug 2026), v1.1.1 release notes.
 
 **Sep 2026 how-to posts** (iRunning 1.2 App Intents, facts taken from `irunning-ios/irunning/AppIntents/`): Siri phrases + Shortcuts actions (`siri-shortcuts-hands-free-running`), "Announce my run" on the Action Button / Back Tap / Control Center (`action-button-announce-my-run`). The two cross-link via `post_url`. Re-check them if intent phrases, the announce settings path (Settings › Customise › Run screen › What to announce) or the iOS 18 minimum change.
+
+**Card previews.** Every post needs `image: path:` in front matter — it is both the OG image and the card preview. Cards load a 720px WebP from `assets/images/blog/thumbs/<image basename>.webp` when it exists (else the full image, else a flat ring cover in the category colour). After adding a post, run `scripts/make-blog-thumbs.sh` (needs `cwebp`; `--force` rebuilds all) and commit the new thumb. The eight launch posts (May–Aug) borrow app-screen figures from later posts as their image.
 
 **Post figures** live in `assets/images/blog/` (PNG @2x, 1440px wide + a 800px `-mobile` variant served via `<picture>` under 560px, because text in a 720px figure is unreadable at phone width). Styled by `.post-figure` in `main.css`. Sources are HTML pages in `_figures/blog/` (Jekyll ignores the folder); re-render one with `_figures/blog/render.sh <name>` (headless Chrome, height read from `.canvas`). The app screens inside them (`announce.png`, `run-classic.png`, `run-locked.png`) were captured without any tapping via the app's DEBUG launch flag: `xcrun simctl launch <udid> interval.irunning --debug-run-display announce` (also `classic --target hr`, `classicLock --locked`, `pickerRun`, `pickerLocked`; see `RunDisplayDebugScreen.swift`). Launch iRunning right after another app and iOS adds a "◂ Settings" back-link to the status bar, so terminate other apps first.
 

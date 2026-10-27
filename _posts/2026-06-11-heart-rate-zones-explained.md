@@ -2,6 +2,8 @@
 title: "Heart Rate Zones Explained: Train Easier to Race Faster"
 description: "What the five heart rate zones actually mean, why most runners spend too much time in the wrong one, and how iRunning keeps you honest."
 categories: [features]
+image:
+  path: /assets/images/blog/zone2-screens.jpg
 ---
 
 Ask a coach what most self-trained runners get wrong, and you'll hear the same answer: easy days aren't easy enough, hard days aren't hard enough. Everything blurs into a medium effort that's too hard to recover from and too easy to improve from.

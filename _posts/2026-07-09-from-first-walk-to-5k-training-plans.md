@@ -2,6 +2,8 @@
 title: "From First Walk to 5K: How Training Plans Work in iRunning"
 description: "Structured training plans that meet you where you are — starting with a walk-to-run plan that's completely free."
 categories: [features]
+image:
+  path: /assets/images/blog/iwt-screens.jpg
 ---
 
 Most people don't need a more advanced running app. They need someone to answer one question, three times a week: *"What should I do today?"*

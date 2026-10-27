@@ -30,7 +30,7 @@ image:
     "Voice cues and countdown beeps for every interval",
     "Apple Watch app with haptics and heart rate",
     "Heart rate zones with time-in-zone breakdown",
-    "Training plans from first walk to 10K",
+    "41 training plans, from first walk to marathon",
     "Import runs from Apple Health, GPX, and FIT",
     "Share cards for your runs"
   ],
@@ -48,7 +48,15 @@ image:
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-text">
-      <span class="hero-badge">Run Tracker &amp; Interval Coach</span>
+      {%- assign releases = site.categories.releases | where_exp: "p", "p.date <= site.time" -%}
+      {%- assign latest_release = releases.first -%}
+      {%- if latest_release %}
+      <a href="{{ latest_release.url | relative_url }}" class="hero-pill" data-ga-event="release_pill_click" data-ga-location="hero">
+        <span class="hero-pill-new">New</span>
+        <span class="hero-pill-text">{{ latest_release.title | split: ":" | first }} — see what's new</span>
+        <span aria-hidden="true">→</span>
+      </a>
+      {%- endif %}
       <h1>Run intervals.<br>Get faster.</h1>
       <p class="hero-sub">iRunning builds your workout, calls every interval in your ear, and tracks the whole run with GPS — on iPhone and Apple Watch.</p>
       <div class="hero-cta">
@@ -57,12 +65,25 @@ image:
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:8px"><path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
           Download on App Store
         </a>
-        <a href="{{ '/blog/' | relative_url }}" class="btn-secondary">See what it can do</a>
+        <a href="{{ '/#features' | relative_url }}" class="btn-secondary">See what it can do</a>
       </div>
-      <p class="hero-note">
-        <span class="hero-note-text">Free · iPhone + Apple Watch</span>
-        <span class="hero-rating">4.9 <span class="stars" aria-hidden="true">★★★★★</span><span class="sr-only"> out of 5 stars</span> <span class="hero-rating-src">App Store</span></span>
-      </p>
+      <dl class="hero-stats">
+        <div class="hero-stat">
+          <dt class="sr-only">App Store rating</dt>
+          <dd><span class="hero-stat-num">4.9</span> <span class="stars" aria-hidden="true">★★★★★</span><span class="sr-only"> out of 5 stars</span></dd>
+          <dd class="hero-stat-label">App Store rating</dd>
+        </div>
+        <div class="hero-stat">
+          <dt class="sr-only">Training plans</dt>
+          <dd><span class="hero-stat-num">41</span></dd>
+          <dd class="hero-stat-label">training plans</dd>
+        </div>
+        <div class="hero-stat">
+          <dt class="sr-only">Price</dt>
+          <dd><span class="hero-stat-num">Free</span></dd>
+          <dd class="hero-stat-label">iPhone + Apple Watch</dd>
+        </div>
+      </dl>
     </div>
     <div class="hero-visual">
       <div class="phone">
@@ -106,9 +127,36 @@ image:
   </div>
 </section>
 
-<!-- Features -->
-<section class="section features">
+<!-- Blog -->
+{% assign visible_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+{% if visible_posts.size > 0 %}
+<section class="section blog-home" id="blog">
   <div class="container">
+    <div class="section-head section-head-row">
+      <div>
+        <span class="eyebrow">From the blog</span>
+        <h2 class="section-title">Training guides, race weeks, app how-tos</h2>
+      </div>
+      <a href="{{ '/blog/' | relative_url }}" class="link-more">All articles <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="blog-home-grid">
+      {% for post in visible_posts limit:1 %}
+        {% include post-card.html post=post variant="featured" location="homepage_blog_preview" %}
+      {% endfor %}
+      <div class="blog-home-list">
+        {% for post in visible_posts offset:1 limit:3 %}
+          {% include post-card.html post=post variant="compact" location="homepage_blog_preview" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Features -->
+<section class="section features" id="features">
+  <div class="container">
+    <span class="eyebrow eyebrow-center">Features</span>
     <h2 class="section-title">Everything a Runner Needs</h2>
     <p class="section-subtitle">One app for the workout, the run, and everything you want to know afterwards.</p>
     <div class="features-grid">
@@ -152,17 +200,18 @@ image:
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
         </div>
         <h3>Training Plans</h3>
-        <p>From your first walk to a confident 10K — structured weeks that adapt to your pace, one session at a time.</p>
+        <p>41 plans, from your first walk to your first marathon — structured weeks that adapt to your pace, one session at a time.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Apple Watch -->
-<section class="watch-section">
+<section class="watch-section" id="watch">
   <div class="container">
     <div class="watch-card">
       <div class="watch-copy">
+        <span class="eyebrow">Apple Watch</span>
         <h2>Build on Your Phone.<br>Run from Your Wrist.</h2>
         <p>Set up the workout on iPhone, then leave it at home. The Watch app runs the whole session on its own.</p>
         <ul class="watch-list">
@@ -189,8 +238,9 @@ image:
 </section>
 
 <!-- Screens gallery -->
-<section class="section">
+<section class="section" id="screens">
   <div class="container">
+    <span class="eyebrow eyebrow-center">Inside the app</span>
     <h2 class="section-title">From First Step to Finish Line</h2>
     <p class="section-subtitle">Real screens from the app — the plan that guides you, the numbers that prove it, and the card you'll post after.</p>
     <div class="gallery-grid">
@@ -237,6 +287,7 @@ image:
 <!-- Import + Share -->
 <section class="section">
   <div class="container">
+    <span class="eyebrow eyebrow-center">Import &amp; share</span>
     <h2 class="section-title">Your Running Life, in One Place</h2>
     <p class="section-subtitle">Bring your history with you, and show off the runs worth showing.</p>
     <div class="split-grid">
@@ -257,6 +308,7 @@ image:
 <!-- Reviews -->
 <section class="section trust">
   <div class="container">
+    <span class="eyebrow eyebrow-center">Runners say</span>
     <h2 class="section-title">Made for Real Training</h2>
     <p class="section-subtitle">Used for couch-to-5K journeys, tempo Tuesdays, and everything in between.</p>
     <div class="reviews-grid">
@@ -292,29 +344,3 @@ image:
     </div>
   </div>
 </section>
-
-<!-- Blog Preview -->
-{% assign visible_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
-{% if visible_posts.size > 0 %}
-<section class="blog-preview">
-  <div class="container">
-    <div class="blog-preview-header">
-      <h2>From the Blog</h2>
-      <a href="{{ '/blog/' | relative_url }}" class="link-more">All articles →</a>
-    </div>
-    <div class="posts-grid">
-      {% for post in visible_posts limit:3 %}
-      <a href="{{ post.url | relative_url }}" class="post-card"
-         data-ga-event="blog_post_click" data-ga-location="homepage_blog_preview" data-ga-post-title="{{ post.title }}">
-        <div class="post-card-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          {% if post.categories.first %}<span class="tag tag-{{ post.categories.first }}">{{ post.categories.first }}</span>{% endif %}
-        </div>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}

@@ -2,6 +2,8 @@
 title: "Five Running Trends Defining 2026"
 description: "Run clubs as the new social scene, the zone 2 boom, races selling out in minutes — what's changing in running this year."
 categories: [news]
+image:
+  path: /assets/images/blog/good-5k-time-hero.jpg
 ---
 
 Running keeps reinventing itself. The sport of 2026 looks noticeably different from just a few years ago — younger, more social, more data-aware, and harder to get a race bib for. Here's what stands out.

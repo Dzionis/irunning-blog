@@ -1,11 +1,13 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="{{ '/' | relative_url }}" class="site-logo">
-      <img src="{{ '/assets/images/icon.png' | relative_url }}" alt="iRunning" class="logo-icon-img">
+      <img src="{{ '/assets/images/icon.png' | relative_url }}" alt="" class="logo-icon-img" width="32" height="32">
       <span class="logo-text">iRunning</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="{{ '/blog/' | relative_url }}" class="nav-link">Blog</a>
+      <a href="{{ '/#features' | relative_url }}" class="nav-link nav-link-wide">Features</a>
+      <a href="{{ '/#watch' | relative_url }}" class="nav-link nav-link-wide">Apple Watch</a>
+      <a href="{{ '/blog/' | relative_url }}" class="nav-link{% if page.url contains '/blog/' %} is-active{% endif %}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
       <a href="{{ site.app_store_url }}" class="btn-nav" target="_blank" rel="noopener"
          data-ga-event="app_store_click" data-ga-location="header_nav" data-ga-destination="{{ site.app_store_url }}">Get App</a>
     </nav>

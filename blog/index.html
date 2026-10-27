@@ -3,28 +3,32 @@ layout: default
 title: "Blog - iRunning"
 description: "App guides, running news, race calendars, and release notes from the iRunning team."
 ---
+{% assign visible_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+{% assign by_cat = visible_posts | group_by_exp: "post", "post.categories.first" | sort: "size" | reverse %}
 
 <section class="blog-page-header">
   <div class="container">
-    <h1>Blog</h1>
-    <p>App guides, running news, race calendars, and what's new in iRunning.</p>
+    <span class="eyebrow">The iRunning blog</span>
+    <h1>Run smarter, one read at a time</h1>
+    <p>Training plans explained, race-week checklists, marathon course guides, and how to get the most out of iRunning.</p>
+    <div class="blog-filters" role="toolbar" aria-label="Filter articles by category">
+      <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">All <span class="filter-count mono-num">{{ visible_posts.size }}</span></button>
+      {%- for group in by_cat %}
+      <button type="button" class="filter-chip" data-filter="{{ group.name }}" aria-pressed="false">{{ group.name | capitalize }} <span class="filter-count mono-num">{{ group.size }}</span></button>
+      {%- endfor %}
+    </div>
   </div>
 </section>
 
 <section class="blog-listing">
   <div class="container">
-    <div class="posts-grid">
-      {% assign visible_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+    <div class="posts-grid" id="posts-grid">
       {% for post in visible_posts %}
-      <a href="{{ post.url | relative_url }}" class="post-card"
-         data-ga-event="blog_post_click" data-ga-location="blog_listing" data-ga-post-title="{{ post.title }}">
-        <div class="post-card-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          {% if post.categories.first %}<span class="tag tag-{{ post.categories.first }}">{{ post.categories.first }}</span>{% endif %}
-        </div>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-      </a>
+        {% if forloop.first %}
+          {% include post-card.html post=post variant="featured" location="blog_listing" eager=true %}
+        {% else %}
+          {% include post-card.html post=post location="blog_listing" %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>

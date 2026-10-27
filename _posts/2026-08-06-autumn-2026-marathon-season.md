@@ -2,6 +2,8 @@
 title: "Autumn 2026 Marathon Season: Berlin, Chicago, New York — and How to Be Ready"
 description: "The big autumn races are locked in. Here are the dates, what makes each one special, and interval sessions to sharpen your final training block."
 categories: [events]
+image:
+  path: /assets/images/blog/first-marathon-hero.jpg
 ---
 
 Autumn is when the marathon world holds its breath. Three of the six World Marathon Majors land within six weeks of each other, and every weekend in between is packed with local races chasing the same cool-weather magic. Here's the 2026 calendar — and how to use the weeks you have left.

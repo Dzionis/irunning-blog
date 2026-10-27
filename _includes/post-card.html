@@ -1,0 +1,38 @@
+{%- comment -%}
+  Blog card with an image preview.
+  Params: post, variant ("featured" | "compact" | omitted), location (GA), eager (true on the first visible card)
+  The preview is the 720px WebP from scripts/make-blog-thumbs.sh when it exists,
+  else the post's full image.path, else a flat ring cover in the category colour.
+{%- endcomment -%}
+{%- assign p = include.post -%}
+{%- assign cat = p.categories.first | default: "news" -%}
+{%- assign img = p.image.path -%}
+{%- assign card_img = nil -%}
+{%- if img -%}
+  {%- assign img_base = img | split: "/" | last | split: "." | first -%}
+  {%- assign thumb_path = "/assets/images/blog/thumbs/" | append: img_base | append: ".webp" -%}
+  {%- assign thumb_file = site.static_files | where: "path", thumb_path | first -%}
+  {%- if thumb_file -%}{%- assign card_img = thumb_path -%}{%- else -%}{%- assign card_img = img -%}{%- endif -%}
+{%- endif -%}
+{%- assign summary = p.description | default: p.excerpt | strip_html | strip -%}
+<a href="{{ p.url | relative_url }}" class="post-card{% if include.variant %} post-card-{{ include.variant }}{% endif %}" data-category="{{ cat }}"
+   data-ga-event="blog_post_click" data-ga-location="{{ include.location }}" data-ga-post-title="{{ p.title | escape }}">
+  <div class="post-card-cover{% unless card_img %} cover-fallback cover-{{ cat }}{% endunless %}">
+    {%- if card_img %}
+    <img src="{{ card_img | relative_url }}" alt="" width="720" height="480"{% if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+    {%- else %}
+    <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-opacity="0.18" stroke-width="10"/><circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-dasharray="190 400" transform="rotate(-90 60 60)"/></svg>
+    {%- endif %}
+  </div>
+  <div class="post-card-body">
+    <div class="post-card-meta">
+      <span class="tag tag-{{ cat }}">{{ cat }}</span>
+      <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%b %-d, %Y" }}</time>
+    </div>
+    <h3>{{ p.title }}</h3>
+    {%- unless include.variant == "compact" %}
+    <p>{{ summary | truncate: 150 }}</p>
+    <span class="post-card-more">{{ p.content | number_of_words | divided_by: 200 | plus: 1 }} min read <span aria-hidden="true">→</span></span>
+    {%- endunless %}
+  </div>
+</a>

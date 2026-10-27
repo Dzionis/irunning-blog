@@ -2,6 +2,8 @@
 title: "How to Build Interval Workouts on iPhone (Without a Spreadsheet)"
 description: "Work, rest, warm-up, cool-down — here's how the iRunning workout builder turns any session you can imagine into something you can actually run."
 categories: [features]
+image:
+  path: /assets/images/blog/sub30-screens.jpg
 ---
 
 Every runner has seen a workout written like this: *"WU 10', then 8×(45" hard / 30" easy), CD 5'."* Simple on paper. Hard to actually run — unless you enjoy staring at a stopwatch and doing arithmetic mid-stride.

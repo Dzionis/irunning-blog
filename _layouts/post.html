@@ -1,15 +1,28 @@
 ---
 layout: default
 ---
+<div class="read-progress" aria-hidden="true"><span></span></div>
 <article class="container post">
   <header class="post-header">
-    <div class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-      {% if page.categories.first %}<span class="tag tag-{{ page.categories.first }}">{{ page.categories.first }}</span>{% endif %}
-      <span class="reading-time">{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
-    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      {% if page.categories.first %}<span aria-hidden="true">/</span>
+      <a href="{{ '/blog/#' | append: page.categories.first | relative_url }}">{{ page.categories.first | capitalize }}</a>{% endif %}
+    </nav>
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      <img src="{{ '/assets/images/icon.png' | relative_url }}" alt="" class="post-meta-avatar" width="36" height="36">
+      <div class="post-meta-text">
+        <span class="post-meta-author">{{ page.author | default: "iRunning Team" }}</span>
+        <span class="post-meta-line">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+          <span aria-hidden="true">·</span>
+          <span class="reading-time">{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+        </span>
+      </div>
+      {% if page.categories.first %}<span class="tag tag-{{ page.categories.first }}">{{ page.categories.first }}</span>{% endif %}
+    </div>
   </header>
 
   <div class="post-content">
@@ -17,11 +30,32 @@ layout: default
   </div>
 
   <div class="post-cta">
+    <img src="{{ '/assets/images/icon.png' | relative_url }}" alt="" class="post-cta-icon" width="56" height="56" loading="lazy">
     <h2>Run Your Next Workout with iRunning</h2>
-    <p>Intervals, GPS tracking, voice cues, and training plans — free on iPhone and Apple Watch.</p>
+    <p>Intervals, GPS tracking, voice cues, and 41 training plans — free on iPhone and Apple Watch.</p>
     <a href="{{ site.app_store_url }}" class="btn-white" target="_blank" rel="noopener"
        data-ga-event="footer_cta_click" data-ga-location="post_cta" data-ga-destination="{{ site.app_store_url }}">
       Download on App Store — Free
     </a>
   </div>
 </article>
+
+{%- assign others = site.posts | where_exp: "p", "p.date <= site.time" | where_exp: "p", "p.url != page.url" -%}
+{%- assign same_cat = others | where_exp: "p", "p.categories.first == page.categories.first" -%}
+{%- assign other_cat = others | where_exp: "p", "p.categories.first != page.categories.first" -%}
+{%- assign related = same_cat | concat: other_cat | slice: 0, 3 -%}
+{% if related.size > 0 %}
+<section class="related">
+  <div class="container">
+    <div class="section-head section-head-row">
+      <h2 class="section-title">Keep reading</h2>
+      <a href="{{ '/blog/' | relative_url }}" class="link-more">All articles <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="posts-grid">
+      {% for post in related %}
+        {% include post-card.html post=post location="post_related" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

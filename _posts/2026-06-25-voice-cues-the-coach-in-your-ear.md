@@ -2,6 +2,8 @@
 title: "Voice Cues: The Coach in Your Ear (That Doesn't Stop Your Music)"
 description: "How iRunning's audio cues work — interval announcements, countdown beeps, and why your playlist keeps playing through all of it."
 categories: [features]
+image:
+  path: /assets/images/blog/announce-anatomy.png
 ---
 
 The hardest part of an interval workout isn't the running. It's the bookkeeping: how long is left, what comes next, when do I switch. Every glance at a screen breaks your rhythm — and at full speed, reading a display is genuinely hard.

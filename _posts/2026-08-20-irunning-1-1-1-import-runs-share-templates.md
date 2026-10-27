@@ -2,6 +2,8 @@
 title: "iRunning 1.1.1: Import Your Run History, Plus 17 New Share Templates"
 description: "The new version brings your whole running past into one place — from Apple Health, GPX, and FIT files — and gives your runs a serious glow-up for sharing."
 categories: [releases]
+image:
+  path: /assets/images/blog/overlay-screens.jpg
 ---
 
 iRunning 1.1.1 is rolling out on the App Store, and it's built around one idea: your running story shouldn't be scattered across old apps and abandoned watches.

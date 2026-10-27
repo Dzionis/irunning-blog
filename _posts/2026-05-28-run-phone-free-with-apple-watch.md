@@ -2,6 +2,8 @@
 title: "Run Phone-Free: How iRunning Works on Apple Watch"
 description: "Build the workout on your iPhone, then leave it at home. Here's what interval running feels like when everything happens on your wrist."
 categories: [features]
+image:
+  path: /assets/images/blog/watch-intervals-hero.jpg
 ---
 
 There's a particular freedom in stepping out the door with nothing but a watch. No armband, no bouncing pocket, no phone to juggle at the water fountain. If you own an Apple Watch, iRunning is built to make that your default.
