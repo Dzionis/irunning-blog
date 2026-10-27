@@ -39,7 +39,8 @@ image:
   "publisher": {
     "@type": "Organization",
     "name": "iRunning",
-    "url": "https://irunning.app/"
+    "url": "https://irunning.app/",
+    "sameAs": [{% for s in site.data.social %}"{{ s.url }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
   }
 }
 </script>

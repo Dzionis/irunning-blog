@@ -22,6 +22,15 @@ author:
 
 social:
   name: iRunning
+  # Same profiles as _data/social.yml (jekyll-seo-tag turns these into sameAs)
+  links:
+    - https://www.instagram.com/irunningapp/
+    - https://www.tiktok.com/@irunningapp
+    - https://www.youtube.com/@irunningapp
+    - https://www.threads.com/@irunningapp
+    - https://x.com/irunningapp
+    - https://www.facebook.com/irunningapp
+    - https://www.pinterest.com/irunningapp/
 
 markdown: kramdown
 kramdown:

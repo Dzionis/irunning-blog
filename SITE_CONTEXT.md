@@ -94,6 +94,7 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 | `_layouts/page.html` | Static pages (privacy, terms) |
 | `_includes/header.html` | Site header (icon + iRunning, nav: Features, Apple Watch — hidden under 768px — Blog, Get App) |
 | `_includes/footer.html` | Dark green footer: brand + download button, App / Blog (category deep links) / Legal columns |
+| `_data/social.yml` | Official social profiles (all **@irunningapp**: Instagram, TikTok, YouTube, Threads, X, Facebook, Pinterest) with Simple Icons paths; footer icon row + homepage JSON-LD `sameAs`. Keep `_config.yml` `social.links` (jekyll-seo-tag sameAs) in sync |
 | `_includes/post-card.html` | Blog card with image preview; `variant` featured / compact; used by homepage, listing, "Keep reading" |
 | `_includes/seo-head.html` | jekyll-seo-tag + smart app banner (`apple-itunes-app` id 6770997508) + favicon |
 | `_includes/analytics.html` | GA4 gtag.js — auto-disabled while ID is the `G-XXXXXXXXXX` placeholder |
@@ -121,6 +122,7 @@ Design source (Claude Design project 019e0c54-cd1a-7445-8570-08cbde57e111): hero
 | `app_store_click` | Header "Get App", footer "App Store" (also auto-fired alongside any event whose destination is apps.apple.com) |
 | `blog_post_click` | Blog cards (`homepage_blog_preview`, `blog_listing`, `post_related`) |
 | `release_pill_click` | Hero "New · iRunning x.y.z" pill |
+| `social_click` | Footer social icons (`data-ga-destination` = profile URL) |
 | `scroll_90` | 90% scroll depth |
 
 ---
