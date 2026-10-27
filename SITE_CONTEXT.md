@@ -58,6 +58,8 @@ Source of truth: `DESIGN_SYSTEM.md` (copied from the app repo). Web decisions:
 
 ## Regenerating app screenshots
 
+**Hero (since 2026-10-27):** three fanned phones — `hero-plan.webp` (0→5K plan overview, week 3) · `hero-run.webp` (run screen) · `hero-summary.webp` ("Tuesday 400s" run summary), from app commit `859eb92` (1.2.4) on the "iRunning Blog Shots" simulator. Run screen without tapping: `xcrun simctl launch <udid> interval.irunning --debug-run-display classic --target hr --hr 158 --elapsed 31 --real-map --route-gpx <container>/tmp/cp.gpx --route-km 3.2` (copy `_figures/blog/gpx/central-park-loop.gpx` into the app's data container `tmp/` first). Plan + summary: launch with `--seed-share-run --seed-home-block active`, Home › "Open plan", then History › Tuesday 400s. The app reads its own `settings.appearanceMode` (set it to `light`, see the rucking note below); status bar `--batteryState discharging` hides the charging bolt. Encode with `cwebp -q 88 -resize 644 0` (run) / `-q 85 -resize 560 0` (sides). The Xcode project is git-ignored in the app repo, so a clean build from `git archive HEAD` needs `irunning.xcodeproj` and `StravaCredentials.swift` copied from the working tree. Fan geometry lives in `.hero-phones` / `.phone-side` in `main.css`. The older single `screen-run.png` is still the JSON-LD screenshot.
+
 Screens live in `assets/images/screens/` (screen-run, screen-plan, screen-summary, screen-celebrate, screen-share @ ~460–644px wide; screen-watch @ 416px). To refresh after app updates:
 
 1. Build `irunning` scheme for an iPhone simulator, `iRunningWatch` for a watch simulator (see the app repo)
