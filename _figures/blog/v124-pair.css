@@ -1,0 +1,7 @@
+.canvas { display: flex; gap: 30px; justify-content: center; align-items: center; }
+.col { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.frame { width: 290px; border-radius: 42px; padding: 8px; }
+.frame .screen { border-radius: 35px; }
+.label { font-size: 14px; font-weight: 500; color: var(--green-900); }
+.label b { display: inline-flex; width: 22px; height: 22px; border-radius: 999px; background: var(--green-400); color: #fff;
+  font-size: 12px; font-weight: 600; align-items: center; justify-content: center; margin-right: 8px; vertical-align: 1px; }
