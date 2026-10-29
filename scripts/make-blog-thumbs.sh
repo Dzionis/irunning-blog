@@ -1,6 +1,6 @@
 #!/bin/bash
 # Builds the 720px WebP card thumbnails in assets/images/blog/thumbs/ for every
-# post's front-matter `image.path`. Cards (homepage, blog listing, "Keep reading")
+# post's (and draft's) front-matter `image.path`. Cards (homepage, blog listing, "Keep reading")
 # use the thumb when it exists and fall back to the full image otherwise.
 # Needs cwebp (Homebrew `webp`).
 # Usage: scripts/make-blog-thumbs.sh            # only missing thumbs
@@ -9,7 +9,8 @@ set -e
 cd "$(dirname "$0")/.."
 out=assets/images/blog/thumbs
 mkdir -p "$out"
-for post in _posts/*.md; do
+shopt -s nullglob
+for post in _posts/*.md _drafts/*.md; do
   src=$(awk 'NR>1 && /^---$/{exit} NR>1' "$post" | grep -A2 '^image:' | grep 'path:' | sed 's/.*path: *//; s/"//g')
   [ -z "$src" ] && continue
   name=$(basename "$src"); name="${name%.*}"
