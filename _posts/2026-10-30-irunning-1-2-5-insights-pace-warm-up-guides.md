@@ -2,6 +2,7 @@
 title: "iRunning 1.2.5: Workout Insights, Pace Up Close, Warm-up and Cool-down Guides"
 description: "What's new in iRunning 1.2.5 and where to find it: an Insights tab that tracks your reps across runs, a Pace screen with scrub-to-map, warm-up and cool-down guides, and your run video ready the moment you finish."
 categories: [releases]
+date: 2026-10-30 08:00:00
 image:
   path: /assets/images/blog/v125-hero.jpg
   width: 1440
