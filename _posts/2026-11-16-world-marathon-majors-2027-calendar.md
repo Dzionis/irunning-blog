@@ -33,6 +33,12 @@ So we checked every line against the official race websites on 12 November 2026.
 
 *Total climb from FindMyMarathon, the one source that measures all eight courses the same way. For Sydney the second figure is the organiser's own. Why the numbers on other charts differ is [further down](#how-hilly-is-each-course).
 
+<figure class="post-figure">
+  <img src="{{ '/assets/images/blog/majors-2027-card.png' | relative_url }}" width="1080" height="1350" loading="lazy"
+       alt="iRunning card of the 2027 World Marathon Majors as of 16 November 2026: race day, entry status, course climb with an elevation profile, and the Monday a 16-week plan starts. Tokyo 7 March, lottery closed, 60 m, plan from 16 November. Boston 19 April, closed with charity places later, 248 m, 28 December. London 24–25 April, ballot closed and charity open, 127 m, 4 January. Cape Town 23 May, lottery closed and charity open, 205 m, 1 February. Sydney 29 August, ballot closed and charity open, 262 m, 10 May. Berlin 26 September, results Thursday 3 December, 73 m, 7 June. Chicago 10 October, results Tuesday 8 December, 74 m, 21 June. New York City 7 November, drawing expected February 2027, 294 m, 19 July.">
+  <figcaption>The same calendar on one card, to save or share. Elevation profiles are drawn to one scale, so a flat course looks flat.</figcaption>
+</figure>
+
 ## What's changed since the charts went round
 
 **Berlin has a new name.** BMW is no longer the title sponsor: from 2027 the race is the **Generali Berlin Marathon**, with a new website at generali-berlin-marathon.com. If you're searching for 2027 entry details, look under the new name.
