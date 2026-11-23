@@ -80,7 +80,7 @@ iRunning doesn't have accounts. There's no sign-up, no email and no login: your 
 
 **Premium:**
 
-- **All 41 training plans**, from 0→5K to a first 50K, including the Sub-4 Marathon and the walking plans.
+- **All 46 training plans**, from 0→5K to a first 50K, including the Sub-4 Marathon and the walking plans.
 - **All 87 preset workouts** and unlimited custom workouts, plus the AI workout builder on iPhones with Apple Intelligence.
 - **Your whole history in the app.** Free shows your last seven days; Premium opens every run. Your runs are saved to Apple Health either way.
 - **Export**: GPX and FIT files, batch export and sending runs to Strava.
